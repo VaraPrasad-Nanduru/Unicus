@@ -22,9 +22,9 @@ const Home = () => {
         >
           <div className="w-10/12 md:w-8/12 text-center">
             <PageSentence
-              title="We Design. We Develop. We Ship. In The Same Day."
-              description="We are committed to not making clients wait. We will deliver the work as quickly as possible. Even on the same day. Even so, we do not reduce the quality of our work."
-              badge="CLIENT-DEVELOPMENT-DRIVEN"
+              title="We Design Solutions. We Develop Systems. We Transform Spaces."
+              description="From smart ERP systems that streamline operations across education, healthcare, and business sectors, to personalized interior designs that transform spaces into works of art - we deliver comprehensive solutions tailored to your unique needs. Quality and innovation, delivered efficiently."
+              badge="DUAL-EXPERTISE-SOLUTIONS"
             />
           </div>
           <div className="flex flex-col gap-6 sm:flex-row w-full sm:w-fit">
