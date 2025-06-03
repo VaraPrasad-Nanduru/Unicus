@@ -10,7 +10,7 @@ import TestimonialList from 'components/organisms/TestimonialList'
 import PageTemplate from 'components/templates/PageTemplate'
 import Image from 'next/image'
 import React from 'react'
-import { FiFigma, FiCode, FiBox } from 'react-icons/fi'
+import { FiHome, FiMonitor, FiSmartphone } from 'react-icons/fi'
 const Home = () => {
   return (
     <>
@@ -38,26 +38,26 @@ const Home = () => {
           </div>
         </section>
         {/* Feature List */}
-        <section className="grid grid-cols-1 gap-5 md:grid-cols-3 mb-16">
+         <section className="grid grid-cols-1 gap-5 md:grid-cols-3 mb-16">
           <div data-aos="fade-up">
             <FeatureCard
-              title="Design"
-              description="The project interface will be designed first, our favorite tool is Figma."
-              icon={<FiFigma />}
+              title="Interior Design & Art"
+              description="Custom artworks, complete interior solutions, and artistic transformations that blend creativity with functionality for unique spaces."
+              icon={<FiHome />}
             />
           </div>
           <div data-aos="fade-up">
             <FeatureCard
-              title="Develop"
-              description="Transform design and write business logic here. Choose the technology you want."
-              icon={<FiCode />}
+              title="ERP & Software Solutions"
+              description="Smart ERP systems, custom software development, and digital solutions that streamline operations across various sectors."
+              icon={<FiMonitor />}
             />
           </div>
           <div data-aos="fade-up">
             <FeatureCard
-              title="Ship"
-              description="After the work is complete, we will send the project and all its assets to you."
-              icon={<FiBox />}
+              title="Digital & Web Services"
+              description="Comprehensive digital marketing, responsive web development, and mobile app solutions to boost your online presence."
+              icon={<FiSmartphone />}
             />
           </div>
         </section>
