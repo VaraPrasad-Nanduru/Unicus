@@ -14,19 +14,27 @@
 
 .footer {
   display: flex;
-  flex: 1;
+  flex-wrap: wrap;
+  /* allow items to wrap if needed */
+  justify-content: space-between;
+  /* distribute columns along the row */
+  align-items: flex-start;
+  /* align to top, not center */
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
 }
 
+
 .footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+  display: block;
+  /* links stacked in the column, not flex */
+  margin: 0.25rem 0;
+  /* optional spacing between links */
+  text-decoration: none;
+  /* style as needed */
+  color: inherit;
 }
+
 
 .title a {
   color: #0070f3;
