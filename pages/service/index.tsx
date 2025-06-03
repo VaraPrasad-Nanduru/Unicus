@@ -26,7 +26,7 @@ const Services = () => {
           <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12">
             <PageSentence
               badge="SERVICES"
-              title="We are here to help solve your company's problems"
+              title="We are here to help solve your Organisation's problems"
             />
           </div>
         </section>

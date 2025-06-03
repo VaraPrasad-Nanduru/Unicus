@@ -21,9 +21,9 @@ const Footer = () => {
               />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:gap-16 xl:gap-20">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4 lg:gap-16 xl:gap-20">
             <div className="space-y-5">
-              <Text value="SERVICES" textStyle="FooterLinkGroupTitle" />
+              <Text value="IT SERVICES" textStyle="FooterLinkGroupTitle" />
               <div className="space-y-[10px]">
                 <NavLink
                   value="Web Development"
@@ -37,6 +37,24 @@ const Footer = () => {
                 <NavLink value="Consultation" href="/service/detail" />
                 <NavLink value="Maintenance" href="/service/detail" />
                 <NavLink value="Pricing" href="/pricing" />
+              </div>
+            </div>
+            <div className="space-y-5">
+              <Text value="INTERIOR SERVICES" textStyle="FooterLinkGroupTitle" />
+              <div className="space-y-[10px]">
+                <NavLink
+                  value="Custom-Made Artworks for Interiors & Large Spaces "
+                  href="/service/detail"
+                />
+                <NavLink
+                  value="Interior Design & Turnkey Execution"
+                  href="/service/detail"
+                />
+                <NavLink value="Fine Art Integration into Interiors " href="/service/detail" />
+                <NavLink value="Artistic Styling & Accessory Curation" href="/service/detail" />
+                <NavLink value="Eco-Friendly & Cost-Smart Design Alternatives " href="/service/detail" />
+                <NavLink value="Empowering Artists & Creative Collaborations" href="/pricing" />
+                <NavLink value="Art Workshops & Creative Learning" href="/pricing" />
               </div>
             </div>
             <div className="space-y-5">
