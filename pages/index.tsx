@@ -10,7 +10,7 @@ import TestimonialList from 'components/organisms/TestimonialList'
 import PageTemplate from 'components/templates/PageTemplate'
 import Image from 'next/image'
 import React from 'react'
-import { FiFigma, FiCode, FiBox } from 'react-icons/fi'
+import { FiHome, FiMonitor, FiSmartphone } from 'react-icons/fi'
 const Home = () => {
   return (
     <>
@@ -22,9 +22,9 @@ const Home = () => {
         >
           <div className="w-10/12 md:w-8/12 text-center">
             <PageSentence
-              title="We Design. We Develop. We Ship. In The Same Day."
-              description="We are committed to not making clients wait. We will deliver the work as quickly as possible. Even on the same day. Even so, we do not reduce the quality of our work."
-              badge="CLIENT-DEVELOPMENT-DRIVEN"
+              title="We Design Solutions. We Develop Systems. We Transform Spaces."
+              description="From smart ERP systems that streamline operations across education, healthcare, and business sectors, to personalized interior designs that transform spaces into works of art - we deliver comprehensive solutions tailored to your unique needs. Quality and innovation, delivered efficiently."
+              badge="DUAL-EXPERTISE-SOLUTIONS"
             />
           </div>
           <div className="flex flex-col gap-6 sm:flex-row w-full sm:w-fit">
@@ -41,23 +41,23 @@ const Home = () => {
         <section className="grid grid-cols-1 gap-5 md:grid-cols-3 mb-16">
           <div data-aos="fade-up">
             <FeatureCard
-              title="Design"
-              description="The project interface will be designed first, our favorite tool is Figma."
-              icon={<FiFigma />}
+              title="Interior Design & Art"
+              description="Custom artworks, complete interior solutions, and artistic transformations that blend creativity with functionality for unique spaces."
+              icon={<FiHome />}
             />
           </div>
           <div data-aos="fade-up">
             <FeatureCard
-              title="Develop"
-              description="Transform design and write business logic here. Choose the technology you want."
-              icon={<FiCode />}
+              title="ERP & Software Solutions"
+              description="Smart ERP systems, custom software development, and digital solutions that streamline operations across various sectors."
+              icon={<FiMonitor />}
             />
           </div>
           <div data-aos="fade-up">
             <FeatureCard
-              title="Ship"
-              description="After the work is complete, we will send the project and all its assets to you."
-              icon={<FiBox />}
+              title="Digital & Web Services"
+              description="Comprehensive digital marketing, responsive web development, and mobile app solutions to boost your online presence."
+              icon={<FiSmartphone />}
             />
           </div>
         </section>
@@ -78,8 +78,8 @@ const Home = () => {
             data-aos="fade-left"
           >
             <SectionSentence
-              title="Everything is well planned, well designed and developed wholeheartedly"
-              paragraph="Careful planning makes us confident, developed with best practices so that the project can be maintained. We always test projects before they are shipped."
+              title="From concept to completion - every project is meticulously planned and executed"
+              paragraph="Whether we're developing smart ERP systems or crafting bespoke interior designs, our approach remains consistent: thorough planning, creative innovation, and flawless execution. We blend technical expertise with artistic vision to deliver solutions that exceed expectations."
               badge="HOW WE WORK"
             />
           </aside>
@@ -89,8 +89,8 @@ const Home = () => {
           <aside className="text-center sm:w-10/12 lg:text-left lg:w-full">
             <div className="space-y-12" data-aos="fade-right">
               <SectionSentence
-                title="We're a team of designers, engineers and analysts"
-                paragraph="Our team consists of many creative people. We are committed to maintaining quality work as well as speed. These creative people work together to create maximum work results."
+                title="We're a diverse team of developers, designers, artists and creative strategists"
+                paragraph="Our multidisciplinary team brings together software engineers, ERP specialists, interior designers, fine artists, and digital marketing experts. This unique blend of technical prowess and creative excellence enables us to deliver comprehensive solutions across both digital and physical spaces."
                 badge="OUR TEAM"
               />
               <ButtonLink
