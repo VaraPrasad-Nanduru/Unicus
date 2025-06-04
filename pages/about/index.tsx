@@ -19,8 +19,8 @@ const About = () => {
               layout="fill"
               objectFit="contain"
               quality={80}
-              alt="Programmers when coding in their laptop"
-              
+              alt="Creative team working on digital solutions and interior designs"
+
             />
           </div>
         </aside>
@@ -30,11 +30,12 @@ const About = () => {
         >
           <PageSentence
             badge="ABOUT"
-            title="We are creative, smart and hardworking people"
-            description={`Several creative people gather in the same place - that's Collosal. We collaborate to produce the best results, loved by clients and comfortable for users. Here we maintain togetherness even though with different backgrounds, all the people here are already experts in their respective fields.`}
+            title="We are creative, smart and hardworking innovators"
+            description={`At Unicus, diverse creative minds unite under one roof - bringing together software engineers, ERP specialists, interior designers, fine artists, and digital strategists. We collaborate to deliver exceptional results across both digital solutions and artistic transformations. From smart ERP systems that streamline business operations to bespoke interior designs that transform spaces into works of art, our multidisciplinary team ensures every project reflects innovation, quality, and client satisfaction.`}
           />
         </aside>
       </section>
+
       <LineDivider />
       <section className="grid place-items-center gap-16">
         <div
@@ -53,7 +54,7 @@ const About = () => {
           <LogoList />
         </div>
       </section>
-      <section className="grid place-items-center gap-16">
+      {/* <section className="grid place-items-center gap-16">
         <div
           className="sm:w-10/12 md:w-8/12 lg:w-6/12 2xl:w-5/12 text-center"
           data-aos="zoom-in-up"
@@ -107,7 +108,7 @@ const About = () => {
             />
           </div>
         </div>
-      </section>
+      </section> */}
     </PageTemplate>
   )
 }

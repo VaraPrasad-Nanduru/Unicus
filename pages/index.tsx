@@ -153,40 +153,40 @@ const Home = () => {
               badge="GET STARTED"
             />
           </div>
-          <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
-            <div data-aos="fade-up-right">
+                    <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 items-stretch">
+            <div data-aos="fade-up-right" className="flex">
               <PricingCard
                 price="1200$"
-                title="UI Design"
+                title="Interior Design & Art"
                 features={[
-                  '10 design pages',
-                  'Well-documented',
-                  '4 revisions',
-                  '$100/additional page',
+                  'Custom artworks & murals',
+                  'Complete interior solutions',
+                  'Eco-friendly alternatives',
+                  'Artist collaboration',
                 ]}
               />
             </div>
-            <div data-aos="fade-up" data-aos-delay="300">
+            <div data-aos="fade-up" data-aos-delay="300" className="flex">
               <PricingCard
                 price="5000$"
-                title="Development"
+                title="ERP & Software Solutions"
                 features={[
-                  'Web & Mobile',
-                  'Well-documented',
-                  '8 revisions',
-                  '$1000/additional page',
+                  'Smart ERP systems',
+                  'Software development',
+                  'Scalable & secure',
+                  'Multi-sector support',
                 ]}
               />
             </div>
-            <div data-aos="fade-up-left">
+            <div data-aos="fade-up-left" className="flex">
               <PricingCard
                 price="3000$"
-                title="Maintenance"
+                title="Digital & Web Services"
                 features={[
-                  'Daily backup',
-                  '3 hours of maintenance',
-                  'Including fixing',
-                  '$50/additional hour',
+                  'Digital marketing campaigns',
+                  'web development',
+                  'Mobile app development',
+                  'SEO & social media',
                 ]}
               />
             </div>

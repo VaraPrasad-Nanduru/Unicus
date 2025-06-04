@@ -43,18 +43,18 @@ const Footer = () => {
               <Text value="INTERIOR SERVICES" textStyle="FooterLinkGroupTitle" />
               <div className="space-y-[10px]">
                 <NavLink
-                  value="Custom-Made Artworks for Interiors & Large Spaces "
+                  value="Custom-Made Artworks"
                   href="/service/detail"
                 />
                 <NavLink
-                  value="Interior Design & Turnkey Execution"
+                  value="Interior Design"
                   href="/service/detail"
                 />
-                <NavLink value="Fine Art Integration into Interiors " href="/service/detail" />
-                <NavLink value="Artistic Styling & Accessory Curation" href="/service/detail" />
-                <NavLink value="Eco-Friendly & Cost-Smart Design Alternatives " href="/service/detail" />
-                <NavLink value="Empowering Artists & Creative Collaborations" href="/pricing" />
-                <NavLink value="Art Workshops & Creative Learning" href="/pricing" />
+                <NavLink value="Fine Art Integration" href="/service/detail" />
+                <NavLink value="Artistic Styling" href="/service/detail" />
+                <NavLink value="Eco-Friendly" href="/service/detail" />
+                <NavLink value="Empowering Artists" href="/pricing" />
+                <NavLink value="Art Workshops" href="/pricing" />
               </div>
             </div>
             <div className="space-y-5">
