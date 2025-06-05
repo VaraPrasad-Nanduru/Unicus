@@ -14,7 +14,7 @@ import { FiHome, FiMonitor, FiSmartphone } from 'react-icons/fi'
 const Home = () => {
   return (
     <>
-      <PageTemplate title="Home - Collosal">
+      <PageTemplate title="Home - Unicus">
         {/* Banner Section */}
         <section
           className="flex flex-col gap-10 items-center  !mt-2 !mb-0"

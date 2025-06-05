@@ -7,7 +7,7 @@ const Document = () => {
       <Head>
           <meta name="description" content="An company profile of Unicus Company. Its company that serve for Application Development (Mobile, Web and Desktop), UI UX Design and Maintenance and Interior Design as well" />
           <meta name="robots" content="index, follow" />
-          <meta name='tags' content='web,app,ui,maintenance,company,collosal,profile' />
+          <meta name='tags' content='web,app,ui,maintenance,company,Unicus,profile' />
         <link
           rel="shortcut icon"
           href="/images/favicon.svg"
