@@ -445,7 +445,7 @@ const ServiceDetail = () => {
               <PageSentence
                 badge="ARTISTIC SERVICES"
                 title="Complete Range of Interior Art Services"
-                paragraph="From wall murals to sculptural installations, we offer comprehensive artistic solutions for residential, commercial, and public spaces."
+                description="From wall murals to sculptural installations, we offer comprehensive artistic solutions for residential, commercial, and public spaces."
               />
             </div>
           </aside>
@@ -479,7 +479,7 @@ const ServiceDetail = () => {
               <PageSentence
                 badge="INDUSTRY EXPERTISE"
                 title="Specialized ERP Solutions for Every Sector"
-                paragraph="Our ERP systems are designed with deep industry knowledge, ensuring compliance, efficiency, and scalability for your specific business needs."
+                description="Our ERP systems are designed with deep industry knowledge, ensuring compliance, efficiency, and scalability for your specific business needs."
               />
             </div>
           </aside>
@@ -493,7 +493,7 @@ const ServiceDetail = () => {
               <PageSentence
                 badge="DIGITAL EXCELLENCE"
                 title="Complete Digital Transformation Solutions"
-                paragraph="From marketing strategies to custom applications, we provide end-to-end digital solutions that drive growth and enhance user experience."
+                description="From marketing strategies to custom applications, we provide end-to-end digital solutions that drive growth and enhance user experience."
               />
             </div>
           </aside>
@@ -542,7 +542,7 @@ const ServiceDetail = () => {
           <PageSentence
             badge="GET STARTED"
             title="Ready to Transform Your Vision into Reality?"
-            paragraph={`Let's discuss your ${serviceType} project and create something amazing together. Get a free consultation and personalized quote.`}
+            description={`Let's discuss your ${serviceType} project and create something amazing together. Get a free consultation and personalized quote.`}
           />
         </div>
         <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up">
