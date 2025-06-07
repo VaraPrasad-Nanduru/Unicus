@@ -28,7 +28,7 @@ const Home = () => {
             />
           </div>
           <div className="flex flex-col gap-6 sm:flex-row w-full sm:w-fit">
-            <ButtonLink value="Send Quote" href="/quote" />
+            <ButtonLink value="Enquiry " href="/quote" />
             <ButtonLink
               value="Learn More"
               color="white"
