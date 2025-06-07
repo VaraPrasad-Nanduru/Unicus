@@ -197,7 +197,7 @@ const Home = () => {
           <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12" data-aos="zoom-in-up">
             <SectionSentence
               title="What do our clients say that we never let down?"
-              badge="TESTIMONIAL"
+              badge="Client stories"
             />
           </div>
           <div className="w-full" data-aos="fade-up">
