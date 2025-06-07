@@ -102,9 +102,9 @@ const About = () => {
           </div>
           <div data-aos="fade-up">
             <TeamCard
-              imageSrc="/images/team-6.webp"
-              job="Project Manager"
-              name="Annette Black"
+              imageSrc="/images/kamal1.jpg"
+              job="FullStack Developer"
+              name="Kamal Nanduru"
             />
           </div>
         </div>
