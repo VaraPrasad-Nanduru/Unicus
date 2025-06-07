@@ -102,7 +102,7 @@ const About = () => {
           </div>
           <div data-aos="fade-up">
             <TeamCard
-              imageSrc="/images/kamal1.jpg"
+              imageSrc="/images/KamalNanduru.webp"
               job="FullStack Developer"
               name="Kamal Nanduru"
             />
