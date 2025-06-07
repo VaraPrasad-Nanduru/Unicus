@@ -37,7 +37,7 @@ const About = () => {
       </section>
 
       <LineDivider />
-      <section className="grid place-items-center gap-16">
+      {/* <section className="grid place-items-center gap-16">
         <div
           className="sm:w-10/12 md:w-8/12 lg:w-6/12 2xl:w-5/12 text-center"
           data-aos="zoom-in-up"
@@ -53,7 +53,7 @@ const About = () => {
           </div>
           <LogoList />
         </div>
-      </section>
+      </section> */}
       <section className="grid place-items-center gap-16">
         <div
           className="sm:w-10/12 md:w-8/12 lg:w-6/12 2xl:w-5/12 text-center"
@@ -102,9 +102,9 @@ const About = () => {
           </div>
           <div data-aos="fade-up">
             <TeamCard
-              imageSrc="/images/team-6.webp"
-              job="Project Manager"
-              name="Annette Black"
+              imageSrc="/images/kamal1.jpg"
+              job="FullStack Developer"
+              name="Kamal Nanduru"
             />
           </div>
         </div>
