@@ -64,14 +64,15 @@ const NavBar = () => {
                 }space-y-5 mt-4 lg:mt-0 lg:space-y-0 lg:space-x-16 lg:flex lg:place-items-center`}
               >
                 <NavLink href="/" value="Home" canActive={true} />
-                <NavLink href="/service" value="Services" canActive={true} />
+                  <NavLink href="/about" value="About" canActive={true} />
+                  <NavLink href="/service" value="Interior Services" canActive={true} />
+                <NavLink href="/service" value="IT Services" canActive={true} />
                 <NavLink
                   href="/how-we-work"
                   value="How We Work"
                   canActive={true}
                 />
-                <NavLink href="/project" value="Project" canActive={true} />
-                <NavLink href="/about" value="About" canActive={true} />
+                {/* <NavLink href="/project" value="Project" canActive={true} /> */}
               </div>
               <div
                 className={`${isOpen ? '' : 'hidden '}lg:block mt-5 lg:mt-0`}
