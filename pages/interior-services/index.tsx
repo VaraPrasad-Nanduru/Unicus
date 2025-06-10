@@ -36,7 +36,7 @@ const InteriorServices = () => {
             <PageSentence
               badge="INTERIOR SERVICES"
               title="Designing Spaces with Soul, Story & Substance"
-              paragraph="From bespoke artworks to end-to-end interiors, Unicus Core blends design, materiality, and meaning to shape spaces that truly resonate."
+              description="From bespoke artworks to end-to-end interiors, Unicus Core blends design, materiality, and meaning to shape spaces that truly resonate."
             />
           </div>
         </section>
@@ -308,7 +308,7 @@ const InteriorServices = () => {
                 <IconListItem icon={<FiRefreshCcw />} value='Waste-to-Art Designs' />
                 <IconListItem icon={<FiUsers />} value='Artist Collaboration' />
                 <IconListItem icon={<FiHeart />} value='Personalized Design Stories' />
-                 <IconListItem icon={<FiSettings />} value='End-to-End Execution' />
+                <IconListItem icon={<FiSettings />} value='End-to-End Execution' />
               </aside>
               <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
             </div>
