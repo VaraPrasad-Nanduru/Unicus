@@ -12,7 +12,7 @@ const HowWeWork = () => {
         <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 2xl:w-5/12 text-center" data-aos="zoom-in-up">
           <PageSentence
             badge="HOW WE WORK"
-            title="We have a workflow that allows the job to be delivered well"
+            title="We follow a structured, transparent workflow to deliver high-quality outcomes <br> - whether you're building digital products or transforming physical spaces."
           />
         </div>
       </section>
@@ -32,8 +32,8 @@ const HowWeWork = () => {
         <aside className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left" data-aos="fade-up-left">
           <SectionSentence
             badge="STEP 01"
-            title={`Let's talk about your company's problems first`}
-            paragraph={"After submitting the quote form, we will review the data, then we will contact you. You can discuss with our team regarding your problem and find a solution to that problem. <br> <br> In this step, you will discuss what application to build."}
+            title={`Discover & Discuss`}
+            paragraph={"Let’s start with a conversation. <br> Once you submit the quote form, our team will review your requirements and get in touch. This step is all about understanding your goals and the problems you're trying to solve - whether it's a new application, a process improvement, or a design vision for your space. <br> <sub> - For tech projects: We’ll align on what needs to be built. <br> - For design projects: We’ll dive into your space, purpose, and vision."}
           />
         </aside>
       </section>
@@ -41,8 +41,8 @@ const HowWeWork = () => {
         <aside className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left" data-aos="fade-up-right">
           <SectionSentence
             badge="STEP 02"
-            title={`Doing planning, design and development until everything is finished`}
-            paragraph="When everything is agreed upon, our team will make plans related to the application that will be created. Starting from analysis, design, to development. <br> <br> In this step, the application is 100% complete."
+            title={`Plan, Design & Build`}
+            paragraph="Turning ideas into execution. <br> After we’ve aligned on the scope, we move into planning, design, and development. Our team creates a detailed roadmap, executes design concepts, and builds your solution—be it a robust app or a creatively styled interior. <br> <sub> - For tech: Wireframes, prototypes, development sprints. <br> - For design: Mood boards, material planning, turnkey execution."
           />
         </aside>
         <aside className="w-full" data-aos="fade-up-left">
@@ -72,8 +72,8 @@ const HowWeWork = () => {
         <aside className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left" data-aos="fade-up-left">
           <SectionSentence
             badge="STEP 03"
-            title={`The project is complete and we ship all the project assets, and access to the server`}
-            paragraph="We will be responsible for delivering all the project assets to you, don't worry. These assets include, design files, source code, server access, and so on. <br> <br> In this step, everything is done and the contract ends."
+            title={`Deliver & Deploy`}
+            paragraph="Your project. Fully delivered. <br> Once complete, we hand over all final assets - clean, organized, and ready to use. This includes: <br> <sub> ✅ For tech: Source code, design files, server access, documentation <br> ✅ For design: High-res renders, layout blueprints, final execution reports </sub> <br> We ensure you walk away with everything you need - backed by a process that's seamless from start to finish."
           />
         </aside>
       </section>
