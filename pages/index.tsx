@@ -18,7 +18,7 @@ const Home = () => {
         {/* Banner Section */}
         {/* !mt-2 !mb-0 */}
         <section
-          className="flex flex-col gap-10 items-center"
+          className="flex flex-col gap-10 items-center !mt-2 !mb-0"
           data-aos="fade-up"
         >
           <div className="w-10/12 md:w-8/12 text-center">
