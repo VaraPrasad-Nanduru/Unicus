@@ -90,7 +90,7 @@ const Services = () => {
                 icon={<FiLayout />}
               />
             </aside>
-            <TextArrowLink label="Service Detail" href="/service/detail?type=interior" />
+            <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
           </div>
         </aside>
       </section>
@@ -119,7 +119,7 @@ const Services = () => {
                 title="Raw Structure to Final Styling" 
               />
             </aside>
-            <TextArrowLink label="Service Detail" href="/service/detail?type=interior" />
+            <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
           </div>
         </aside>
         <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
@@ -160,7 +160,7 @@ const Services = () => {
               <IconListItem icon={<FiRefreshCcw />} value='Waste-to-Art Integration' />
               <IconListItem icon={<FiUsers />} value='Artist Collaboration' />
             </aside>
-            <TextArrowLink label="Service Detail" href="/service/detail?type=interior" />
+            <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
           </div>
         </aside>
       </section>
@@ -201,7 +201,7 @@ const Services = () => {
                 icon={<FiBookOpen />}
               />
             </aside>
-            <TextArrowLink label="Service Detail" href="/service/detail?type=erp" />
+            <TextArrowLink label="Service Detail" href="/services-detail?type=erp" />
           </div>
         </aside>
       </section>
@@ -230,7 +230,7 @@ const Services = () => {
                 title="Utility Management ERP" 
               />
             </aside>
-            <TextArrowLink label="Service Detail" href="/service/detail?type=erp" />
+            <TextArrowLink label="Service Detail" href="/services-detail?type=erp" />
           </div>
         </aside>
         <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
@@ -271,7 +271,7 @@ const Services = () => {
               <IconListItem icon={<FiShield />} value='Secure Data Management' />
               <IconListItem icon={<FiTrendingUp />} value='Real-Time Analytics' />
             </aside>
-            <TextArrowLink label="Service Detail" href="/service/detail?type=erp" />
+            <TextArrowLink label="Service Detail" href="/services-detail?type=erp" />
           </div>
         </aside>
       </section>
@@ -312,7 +312,7 @@ const Services = () => {
                 icon={<FiUsers />}
               />
             </aside>
-            <TextArrowLink label="Service Detail" href="/service/detail?type=digital" />
+            <TextArrowLink label="Service Detail" href="/services-detail?type=digital" />
           </div>
         </aside>
       </section>
@@ -341,7 +341,7 @@ const Services = () => {
                 title="Custom Web Applications" 
               />
             </aside>
-            <TextArrowLink label="Service Detail" href="/service/detail?type=digital" />
+            <TextArrowLink label="Service Detail" href="/services-detail?type=digital" />
           </div>
         </aside>
         <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
@@ -382,7 +382,7 @@ const Services = () => {
               <IconListItem icon={<FiUsers />} value='User Experience Focus' />
               <IconListItem icon={<FiTrendingUp />} value='Scalable Architecture' />
             </aside>
-            <TextArrowLink label="Service Detail" href="/service/detail?type=digital" />
+            <TextArrowLink label="Service Detail" href="/services-detail?type=digital" />
           </div>
         </aside>
       </section>
