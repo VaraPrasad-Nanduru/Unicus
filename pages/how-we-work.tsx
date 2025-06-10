@@ -12,7 +12,8 @@ const HowWeWork = () => {
         <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 2xl:w-5/12 text-center" data-aos="zoom-in-up">
           <PageSentence
             badge="HOW WE WORK"
-            title="We follow a structured, transparent workflow to deliver high-quality outcomes <br> - whether you're building digital products or transforming physical spaces."
+            title="Work flow at Unicus"
+            description="We follow a structured, transparent workflow to deliver high-quality outcomes. whether you're building digital products or transforming physical spaces."
           />
         </div>
       </section>
@@ -42,7 +43,7 @@ const HowWeWork = () => {
           <SectionSentence
             badge="STEP 02"
             title={`Plan, Design & Build`}
-            paragraph="Turning ideas into execution. <br> After we’ve aligned on the scope, we move into planning, design, and development. Our team creates a detailed roadmap, executes design concepts, and builds your solution—be it a robust app or a creatively styled interior. <br> <sub> - For tech: Wireframes, prototypes, development sprints. <br> - For design: Mood boards, material planning, turnkey execution."
+            paragraph="Turning ideas into execution. <br> After we’ve aligned on the scope, we move into planning, design, and development. Our team creates a detailed roadmap, executes design concepts, and builds your solution be it a robust app or a creatively styled interior. <br> <sub> - For tech: Wireframes, prototypes, development sprints. <br> - For design: Mood boards, material planning, turnkey execution."
           />
         </aside>
         <aside className="w-full" data-aos="fade-up-left">
