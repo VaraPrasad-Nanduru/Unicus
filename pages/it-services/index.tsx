@@ -5,15 +5,9 @@ import LineDivider from 'components/atoms/LineDivider'
 import Image from 'next/image'
 import SectionSentence from 'components/molecules/SectionSentence'
 import {
-  FiArrowUp,
-  FiCheckCircle,
-  FiDownload,
   FiGlobe,
-  FiLayout,
   FiMonitor,
-  FiRefreshCcw,
   FiSmartphone,
-  FiHome,
   FiTrendingUp,
   FiCode,
   FiDatabase,
@@ -23,260 +17,41 @@ import {
   FiShoppingBag,
   FiMapPin,
   FiZap,
-  FiUsers
+  FiUsers,
+  FiTarget,
+  FiBarChart,
+  FiActivity
 } from 'react-icons/fi'
 import SmallCardIcon from 'components/molecules/Card/SmallCardIcon'
 import CardListIcon from 'components/molecules/Card/CardListIcon'
 import TextArrowLink from 'components/molecules/TextArrowLink'
 import IconListItem from 'components/molecules/IconListItem'
 
-type ServiceCategory = 'interior' | 'erp' | 'digital'
+type ServiceCategory = 'digital' | 'development' | 'erp'
 
-const Services = () => {
-  const [activeService, setActiveService] = useState<ServiceCategory>('interior')
+const ITServices = () => {
+  const [activeService, setActiveService] = useState<ServiceCategory>('digital')
 
   const serviceButtons = [
     {
-      id: 'interior' as ServiceCategory,
-      title: 'Interior Design & Art',
-      icon: <FiHome />,
-      description: 'Custom artworks & complete interior solutions'
+      id: 'digital' as ServiceCategory,
+      title: 'Digital Marketing',
+      icon: <FiTrendingUp />,
+      description: 'Data-driven strategies & campaign management'
+    },
+    {
+      id: 'development' as ServiceCategory,
+      title: 'Development Services',
+      icon: <FiCode />,
+      description: 'Web, mobile & custom software solutions'
     },
     {
       id: 'erp' as ServiceCategory,
-      title: 'ERP & Software Solutions',
+      title: 'ERP Solutions',
       icon: <FiMonitor />,
-      description: 'Smart ERP systems & custom software'
-    },
-    {
-      id: 'digital' as ServiceCategory,
-      title: 'Digital & Web Services',
-      icon: <FiSmartphone />,
-      description: 'Digital marketing & web development'
+      description: 'Smart, scalable & sector-specific systems'
     }
   ]
-
-  const renderInteriorServices = () => (
-    <>
-      <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
-        <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
-          <figure className="w-full h-[315px] relative">
-            <Image
-              src={'/images/ui-design-illustration.svg'}
-              layout="fill"
-              objectFit="fill"
-              alt='Custom Artworks'
-            />
-          </figure>
-        </aside>
-        <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
-          <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
-            <SectionSentence
-              badge="CUSTOM ARTWORKS"
-              title="Custom-Made Artworks for Interiors & Large Spaces"
-              paragraph="Every artwork we create is tailored specifically for the space and its purpose—from cozy homes to massive commercial halls."
-            />
-          </div>
-          <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
-            <aside className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <SmallCardIcon
-                title="Wall Murals"
-                description="Customized to size, style, and story"
-                icon={<FiLayout />}
-              />
-              <SmallCardIcon
-                title="Sculptural Art"
-                description="Relief, 3D, suspended installations"
-                icon={<FiLayout />}
-              />
-            </aside>
-            <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
-          </div>
-        </aside>
-      </section>
-
-      <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
-        <aside className="grid gap-12 place-items-center" data-aos="fade-up-right">
-          <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
-            <SectionSentence
-              badge="INTERIOR DESIGN"
-              title="Interior Design & Turnkey Execution"
-              paragraph="End-to-end interior design for residential, retail, hospitality, malls and workspaces with complete execution."
-            />
-          </div>
-          <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
-            <aside className="w-full grid grid-cols-1 gap-5">
-              <CardListIcon
-                icon={<FiHome />}
-                title="Residential & Commercial Design"
-              />
-              <CardListIcon
-                icon={<FiLayout />}
-                title="3D Visualization & Material Sourcing"
-              />
-              <CardListIcon 
-                icon={<FiSettings />} 
-                title="Raw Structure to Final Styling" 
-              />
-            </aside>
-            <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
-          </div>
-        </aside>
-        <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
-          <figure className="w-full h-[450px] relative">
-            <Image
-              src={'/images/development-illustration.svg'}
-              layout="fill"
-              objectFit="fill"
-              alt='Interior Design'
-            />
-          </figure>
-        </aside>
-      </section>
-
-      <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
-        <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
-          <figure className="w-full h-[545px] relative">
-            <Image
-              src={'/images/maintenance-illustration.svg'}
-              layout="fill"
-              objectFit="fill"
-              alt='Eco-friendly design'
-            />
-          </figure>
-        </aside>
-        <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
-          <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
-            <SectionSentence
-              badge="ECO-FRIENDLY"
-              title="Eco-Friendly & Cost-Smart Design Alternatives"
-              paragraph="Innovative alternatives to costly materials with up to 40% savings without sacrificing beauty."
-            />
-          </div>
-          <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
-            <aside className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
-              <IconListItem icon={<FiTrendingUp />} value='40% Cost Savings' />
-              <IconListItem icon={<FiCheckCircle />} value='Sustainable Materials' />
-              <IconListItem icon={<FiRefreshCcw />} value='Waste-to-Art Integration' />
-              <IconListItem icon={<FiUsers />} value='Artist Collaboration' />
-            </aside>
-            <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
-          </div>
-        </aside>
-      </section>
-    </>
-  )
-
-  const renderERPServices = () => (
-    <>
-      <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
-        <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
-          <figure className="w-full h-[315px] relative">
-            <Image
-              src={'/images/ui-design-illustration.svg'}
-              layout="fill"
-              objectFit="fill"
-              alt='ERP Systems'
-            />
-          </figure>
-        </aside>
-                <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
-          <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
-            <SectionSentence
-              badge="ERP SOLUTIONS"
-              title="Comprehensive ERP Systems for Every Sector"
-              paragraph="Smart ERP solutions designed for hospitals, educational institutes, retail, government, and utility sectors."
-            />
-          </div>
-          <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
-            <aside className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <SmallCardIcon
-                title="Hospital ERP"
-                description="Streamline healthcare operations"
-                icon={<FiMonitor />}
-              />
-              <SmallCardIcon
-                title="Educational ERP"
-                description="Enhance institutional efficiency"
-                icon={<FiBookOpen />}
-              />
-            </aside>
-            <TextArrowLink label="Service Detail" href="/services-detail?type=erp" />
-          </div>
-        </aside>
-      </section>
-
-      <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
-        <aside className="grid gap-12 place-items-center" data-aos="fade-up-right">
-          <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
-            <SectionSentence
-              badge="CUSTOM SOFTWARE"
-              title="Custom Software Development Solutions"
-              paragraph="Reliable, scalable, and secure software tailored to your operations and business goals."
-            />
-          </div>
-          <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
-            <aside className="w-full grid grid-cols-1 gap-5">
-              <CardListIcon
-                icon={<FiShoppingBag />}
-                title="Retail ERP Systems"
-              />
-              <CardListIcon
-                icon={<FiMapPin />}
-                title="Government Sector ERP"
-              />
-              <CardListIcon 
-                icon={<FiZap />} 
-                title="Utility Management ERP" 
-              />
-            </aside>
-            <TextArrowLink label="Service Detail" href="/services-detail?type=erp" />
-          </div>
-        </aside>
-        <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
-          <figure className="w-full h-[450px] relative">
-            <Image
-              src={'/images/development-illustration.svg'}
-              layout="fill"
-              objectFit="fill"
-              alt='Software Development'
-            />
-          </figure>
-        </aside>
-      </section>
-
-      <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
-        <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
-          <figure className="w-full h-[545px] relative">
-            <Image
-              src={'/images/maintenance-illustration.svg'}
-              layout="fill"
-              objectFit="fill"
-              alt='ERP Features'
-            />
-          </figure>
-        </aside>
-        <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
-          <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
-            <SectionSentence
-              badge="WHY CHOOSE UNICUS ERP"
-              title="Advanced Features for Modern Business Needs"
-              paragraph="100% customizable modules with cloud-based solutions, real-time analytics, and secure data management."
-            />
-          </div>
-          <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
-            <aside className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
-              <IconListItem icon={<FiSettings />} value='100% Customizable' />
-              <IconListItem icon={<FiDatabase />} value='Cloud & On-Premise' />
-              <IconListItem icon={<FiShield />} value='Secure Data Management' />
-              <IconListItem icon={<FiTrendingUp />} value='Real-Time Analytics' />
-            </aside>
-            <TextArrowLink label="Service Detail" href="/services-detail?type=erp" />
-          </div>
-        </aside>
-      </section>
-    </>
-  )
 
   const renderDigitalServices = () => (
     <>
@@ -302,14 +77,14 @@ const Services = () => {
           <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
             <aside className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5">
               <SmallCardIcon
-                title="SEO & Content"
-                description="Optimize for search engines"
-                icon={<FiTrendingUp />}
+                title="Campaigns"
+                description="Targeted strategies for brand elevation"
+                icon={<FiTarget />}
               />
               <SmallCardIcon
-                title="Social Media"
-                description="Engage your target audience"
-                icon={<FiUsers />}
+                title="Lead Management"
+                description="Streamlined workflows from awareness to conversion"
+                icon={<FiBarChart />}
               />
             </aside>
             <TextArrowLink label="Service Detail" href="/services-detail?type=digital" />
@@ -321,24 +96,24 @@ const Services = () => {
         <aside className="grid gap-12 place-items-center" data-aos="fade-up-right">
           <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
             <SectionSentence
-              badge="WEB DEVELOPMENT"
-              title="Modern, Responsive & User-Friendly Websites"
-              paragraph="We design and develop websites tailored to your business needs. From simple landing pages to complex web applications with performance and security."
+              badge="CAMPAIGNS"
+              title="Reach the Right Audience at the Right Time"
+              paragraph="From SEO and social media to paid ads and content-driven campaigns, we craft targeted strategies that elevate your brand and deliver measurable engagement."
             />
           </div>
           <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
             <aside className="w-full grid grid-cols-1 gap-5">
               <CardListIcon
-                icon={<FiGlobe />}
-                title="Responsive Web Development"
+                icon={<FiTrendingUp />}
+                title="SEO & Content Marketing"
               />
               <CardListIcon
-                icon={<FiSmartphone />}
-                title="Mobile App Development"
+                icon={<FiUsers />}
+                title="Social Media Campaigns"
               />
               <CardListIcon 
-                icon={<FiCode />} 
-                title="Custom Web Applications" 
+                icon={<FiTarget />} 
+                title="Paid Advertising & PPC" 
               />
             </aside>
             <TextArrowLink label="Service Detail" href="/services-detail?type=digital" />
@@ -350,7 +125,7 @@ const Services = () => {
               src={'/images/development-illustration.svg'}
               layout="fill"
               objectFit="fill"
-              alt='Web Development'
+              alt='Digital Campaigns'
             />
           </figure>
         </aside>
@@ -363,24 +138,24 @@ const Services = () => {
               src={'/images/maintenance-illustration.svg'}
               layout="fill"
               objectFit="fill"
-              alt='App Development'
+              alt='Lead Management'
             />
           </figure>
         </aside>
         <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
           <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
             <SectionSentence
-              badge="APP DEVELOPMENT"
-              title="High-Performance Mobile Apps for Every Platform"
-              paragraph="Bring your ideas to life with intuitive, scalable mobile apps for Android, iOS, or cross-platform use."
+              badge="LEAD MANAGEMENT"
+              title="Turn Interest into Impact with Streamlined Workflows"
+              paragraph="We help you capture, track, and nurture leads efficiently - ensuring every prospect is guided smoothly from awareness to conversion with data-driven precision."
             />
           </div>
           <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
             <aside className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
-              <IconListItem icon={<FiSmartphone />} value='iOS & Android Apps' />
-              <IconListItem icon={<FiMonitor />} value='Cross-Platform Solutions' />
-              <IconListItem icon={<FiUsers />} value='User Experience Focus' />
-              <IconListItem icon={<FiTrendingUp />} value='Scalable Architecture' />
+              <IconListItem icon={<FiActivity />} value='Lead Capture & Tracking' />
+              <IconListItem icon={<FiBarChart />} value='Data-Driven Nurturing' />
+              <IconListItem icon={<FiTarget />} value='Conversion Optimization' />
+              <IconListItem icon={<FiTrendingUp />} value='Performance Analytics' />
             </aside>
             <TextArrowLink label="Service Detail" href="/services-detail?type=digital" />
           </div>
@@ -389,27 +164,252 @@ const Services = () => {
     </>
   )
 
+  const renderDevelopmentServices = () => (
+    <>
+      <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
+        <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
+          <figure className="w-full h-[315px] relative">
+            <Image
+              src={'/images/ui-design-illustration.svg'}
+              layout="fill"
+              objectFit="fill"
+              alt='Web Development'
+            />
+          </figure>
+        </aside>
+        <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
+          <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
+            <SectionSentence
+              badge="WEB DEVELOPMENT"
+              title="Modern, Responsive & User-Friendly Websites"
+              paragraph="We design and develop modern, responsive, and user-friendly websites tailored to your business needs. Whether it's a simple landing page or a complex web application, we ensure performance, security, and aesthetic appeal."
+            />
+          </div>
+          <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
+            <aside className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <SmallCardIcon
+                title="Responsive Design"
+                description="Mobile-first, cross-platform compatibility"
+                icon={<FiGlobe />}
+              />
+              <SmallCardIcon
+                title="Performance Focus"
+                description="Fast loading, secure & scalable"
+                icon={<FiTrendingUp />}
+              />
+            </aside>
+            <TextArrowLink label="Service Detail" href="/services-detail?type=development" />
+          </div>
+        </aside>
+      </section>
+
+      <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
+        <aside className="grid gap-12 place-items-center" data-aos="fade-up-right">
+          <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
+            <SectionSentence
+              badge="APP DEVELOPMENT"
+              title="High-Performance Mobile Apps for Every Platform"
+              paragraph="Bring your ideas to life with high-performance mobile apps for Android, iOS, or cross-platform use. Our apps are intuitive, scalable, and built to provide seamless user experiences that drive engagement and loyalty."
+            />
+          </div>
+          <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
+            <aside className="w-full grid grid-cols-1 gap-5">
+              <CardListIcon
+                icon={<FiSmartphone />}
+                title="iOS & Android Development"
+              />
+              <CardListIcon
+                icon={<FiCode />}
+                title="Cross-Platform Solutions"
+              />
+              <CardListIcon 
+                icon={<FiUsers />} 
+                title="User Experience Focus" 
+              />
+            </aside>
+            <TextArrowLink label="Service Detail" href="/services-detail?type=development" />
+          </div>
+        </aside>
+        <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
+          <figure className="w-full h-[450px] relative">
+            <Image
+              src={'/images/development-illustration.svg'}
+              layout="fill"
+              objectFit="fill"
+              alt='App Development'
+            />
+          </figure>
+        </aside>
+      </section>
+
+      <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
+        <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
+          <figure className="w-full h-[545px] relative">
+            <Image
+              src={'/images/maintenance-illustration.svg'}
+              layout="fill"
+              objectFit="fill"
+              alt='Software Development'
+            />
+          </figure>
+        </aside>
+        <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
+          <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
+            <SectionSentence
+              badge="SOFTWARE DEVELOPMENT"
+              title="Custom Software Solutions That Solve Real Business Problems"
+              paragraph="From automation tools to enterprise systems, we build reliable, scalable, and secure software tailored to your operations and goals."
+            />
+          </div>
+          <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
+            <aside className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
+              <IconListItem icon={<FiSettings />} value='Automation Tools' />
+              <IconListItem icon={<FiDatabase />} value='Enterprise Systems' />
+              <IconListItem icon={<FiShield />} value='Secure & Scalable' />
+              <IconListItem icon={<FiCode />} value='Custom Solutions' />
+            </aside>
+            <TextArrowLink label="Service Detail" href="/services-detail?type=development" />
+          </div>
+        </aside>
+      </section>
+    </>
+  )
+
+  const renderERPServices = () => (
+    <>
+      <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
+        <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
+          <figure className="w-full h-[315px] relative">
+            <Image
+              src={'/images/ui-design-illustration.svg'}
+              layout="fill"
+              objectFit="fill"
+              alt='ERP Solutions'
+            />
+          </figure>
+        </aside>
+        <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
+          <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
+            <SectionSentence
+              badge="ERP SOLUTIONS"
+              title="Smart, Scalable & Sector-Specific Systems"
+              paragraph="Our ERP solutions are tailored to address unique industry challenges - offering centralized control, automation, and real-time visibility across departments."
+            />
+          </div>
+          <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
+            <aside className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <SmallCardIcon
+                title="Hospital ERP"
+                description="Streamline healthcare operations & patient care"
+                icon={<FiActivity />}
+              />
+              <SmallCardIcon
+                title="Educational ERP"
+                description="Enhance student engagement & efficiency"
+                icon={<FiBookOpen />}
+              />
+            </aside>
+            <TextArrowLink label="Service Detail" href="/services-detail?type=erp" />
+          </div>
+        </aside>
+      </section>
+
+      <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
+                <aside className="grid gap-12 place-items-center" data-aos="fade-up-right">
+          <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
+            <SectionSentence
+              badge="SECTOR-SPECIFIC ERP"
+              title="Tailored Solutions for Every Industry"
+              paragraph="Whether you're a hospital, educational institution, retail chain, government department, or utility provider, our ERP systems are designed to simplify operations and improve service delivery."
+            />
+          </div>
+          <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
+            <aside className="w-full grid grid-cols-1 gap-5">
+              <CardListIcon
+                icon={<FiShoppingBag />}
+                title="Retail ERP - Streamline Operations & Boost Profitability"
+              />
+              <CardListIcon
+                icon={<FiMapPin />}
+                title="Government ERP - Administrative Process Optimization"
+              />
+              <CardListIcon 
+                icon={<FiZap />} 
+                title="Utility ERP - Service Delivery & Compliance" 
+              />
+            </aside>
+            <TextArrowLink label="Service Detail" href="/services-detail?type=erp" />
+          </div>
+        </aside>
+        <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
+          <figure className="w-full h-[450px] relative">
+            <Image
+              src={'/images/development-illustration.svg'}
+              layout="fill"
+              objectFit="fill"
+              alt='Sector Specific ERP'
+            />
+          </figure>
+        </aside>
+      </section>
+
+      <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
+        <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
+          <figure className="w-full h-[545px] relative">
+            <Image
+              src={'/images/maintenance-illustration.svg'}
+              layout="fill"
+              objectFit="fill"
+              alt='Why Choose Unicus ERP'
+            />
+          </figure>
+        </aside>
+        <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
+          <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
+            <SectionSentence
+              badge="WHY CHOOSE UNICUS ERP"
+              title="Advanced Features for Modern Business Needs"
+              paragraph="Our ERP systems provide comprehensive solutions with customizable modules, cloud-based options, and enterprise-grade security for optimal business performance."
+            />
+          </div>
+          <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
+            <aside className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
+              <IconListItem icon={<FiSettings />} value='100% Customizable Modules' />
+              <IconListItem icon={<FiDatabase />} value='Cloud-Based & On-Premise' />
+              <IconListItem icon={<FiUsers />} value='Multi-User Role-Based Access' />
+              <IconListItem icon={<FiTrendingUp />} value='Real-Time Analytics & Reporting' />
+              <IconListItem icon={<FiShield />} value='Secure Data Management' />
+              <IconListItem icon={<FiCode />} value='Third-Party Tool Integration' />
+            </aside>
+            <TextArrowLink label="Service Detail" href="/services-detail?type=erp" />
+          </div>
+        </aside>
+      </section>
+    </>
+  )
+
   const renderServiceContent = () => {
     switch (activeService) {
-      case 'interior':
-        return renderInteriorServices()
-      case 'erp':
-        return renderERPServices()
       case 'digital':
         return renderDigitalServices()
+      case 'development':
+        return renderDevelopmentServices()
+      case 'erp':
+        return renderERPServices()
       default:
-        return renderInteriorServices()
+        return renderDigitalServices()
     }
   }
 
   return (
     <>
-      <PageTemplate title='Service - Unicus'>
+      <PageTemplate title='IT Services - Unicus'>
         <section className="grid place-items-center" data-aos="zoom-in-up">
           <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12">
             <PageSentence
-              badge="SERVICES"
-              title="We are here to help solve your Organisation's problems"
+              badge="IT SERVICES"
+              title="Comprehensive Technology Solutions for Modern Businesses"
+              description="From digital marketing and custom development to enterprise ERP systems, we deliver technology solutions that drive growth and efficiency."
             />
           </div>
         </section>
@@ -459,4 +459,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default ITServices
