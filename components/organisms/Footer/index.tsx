@@ -70,7 +70,7 @@ const Footer = () => {
               <Text value="MORE" textStyle="FooterLinkGroupTitle" />
               <div className="space-y-3">
                 {/* <NavLink value="Jobs" href="/jobs" /> */}
-                <NavLink value="Blogs" href="/blog" />
+                {/*  <NavLink value="Blogs" href="/blog" /> */}
                 <NavLink value="Sitemap" href="/sitemap" />
               </div>
             </div>
