@@ -60,7 +60,7 @@ const Footer = () => {
             <div className="space-y-5">
               <Text value="RESOURCES" textStyle="FooterLinkGroupTitle" />
               <div className="space-y-3">
-                <NavLink value="Terms of Service" href="/term-of-service" />
+                <NavLink value="Terms and Conditions" href="/term-of-service" />
                 <NavLink value="Privacy Policy" href="/privacy-policy" />
                 <NavLink value="Terms of use" href="/documentation" />
               </div>
