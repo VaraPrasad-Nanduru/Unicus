@@ -67,9 +67,9 @@ const About = () => {
         <div className="w-full grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           <div data-aos="fade-up">
             <TeamCard
-              imageSrc="/images/team-1.webp"
+              imageSrc="/images/Dheekshetha.webp"
               job="Founder"
-              name="Albert Flores"
+              name="Dheekshetha"
             />
           </div>
           <div data-aos="fade-up">
