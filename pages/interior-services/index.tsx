@@ -1,4 +1,4 @@
-                import React from 'react'
+import React from 'react'
 import PageTemplate from 'components/templates/PageTemplate'
 import PageSentence from 'components/molecules/PageSentence'
 import LineDivider from 'components/atoms/LineDivider'
@@ -76,7 +76,7 @@ const InteriorServices = () => {
                   icon={<FiPenTool />}
                 />
               </aside>
-              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
+              <TextArrowLink label="Discover More" href="/services-detail?type=interior" />
             </div>
           </aside>
         </section>
@@ -101,12 +101,12 @@ const InteriorServices = () => {
                   icon={<FiHome />}
                   title="Residential & Commercial Spaces"
                 />
-                <CardListIcon 
-                  icon={<FiHeart />} 
-                  title="Brand Identity Integration" 
+                <CardListIcon
+                  icon={<FiHeart />}
+                  title="Brand Identity Integration"
                 />
               </aside>
-              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
+              <TextArrowLink label="Discover More" href="/services-detail?type=interior" />
             </div>
           </aside>
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
@@ -154,7 +154,7 @@ const InteriorServices = () => {
                   icon={<FiGlobe />}
                 />
               </aside>
-              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
+              <TextArrowLink label="Discover More" href="/services-detail?type=interior" />
             </div>
           </aside>
         </section>
@@ -179,12 +179,12 @@ const InteriorServices = () => {
                   icon={<FiUsers />}
                   title="Mural-Making Workshops"
                 />
-                <CardListIcon 
-                  icon={<FiPenTool />} 
-                  title="Creative Skills Development" 
+                <CardListIcon
+                  icon={<FiPenTool />}
+                  title="Creative Skills Development"
                 />
               </aside>
-              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
+              <TextArrowLink label="Discover More" href="/services-detail?type=interior" />
             </div>
           </aside>
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
@@ -232,7 +232,7 @@ const InteriorServices = () => {
                   icon={<FiLayers />}
                 />
               </aside>
-              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
+              <TextArrowLink label="Discover More" href="/services-detail?type=interior" />
             </div>
           </aside>
         </section>
@@ -257,16 +257,16 @@ const InteriorServices = () => {
                   icon={<FiSettings />}
                   title="Unique Materials & Techniques"
                 />
-                <CardListIcon 
-                  icon={<FiHeart />} 
-                  title="Seamless Art Integration" 
+                <CardListIcon
+                  icon={<FiHeart />}
+                  title="Seamless Art Integration"
                 />
-                <CardListIcon 
-                  icon={<FiGlobe />} 
-                  title="Modern Meets Traditional" 
+                <CardListIcon
+                  icon={<FiGlobe />}
+                  title="Modern Meets Traditional"
                 />
               </aside>
-              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
+              <TextArrowLink label="Discover More" href="/services-detail?type=interior" />
             </div>
           </aside>
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
@@ -310,7 +310,7 @@ const InteriorServices = () => {
                 <IconListItem icon={<FiHeart />} value='Personalized Design Stories' />
                 <IconListItem icon={<FiSettings />} value='End-to-End Execution' />
               </aside>
-              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
+              <TextArrowLink label="Discover More" href="/services-detail?type=interior" />
             </div>
           </aside>
         </section>

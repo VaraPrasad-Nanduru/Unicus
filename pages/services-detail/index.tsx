@@ -27,7 +27,7 @@ const ServiceDetail = () => {
   // Simple icon component to avoid import issues
   const IconComponent = ({ type }: { type: string }) => {
     const iconStyle = "w-6 h-6 flex items-center justify-center text-lg"
-    
+
     switch (type) {
       case 'home':
         return <div className={iconStyle}>🏠</div>
@@ -372,7 +372,7 @@ const ServiceDetail = () => {
     }
   }
 
-    const getServiceImageAlt = () => {
+  const getServiceImageAlt = () => {
     switch (serviceType) {
       case 'interior':
         return 'Interior Design and Custom Artwork Services'
@@ -390,7 +390,7 @@ const ServiceDetail = () => {
   const currentData = getCurrentServiceData()
 
   return (
-    <PageTemplate title="Service Detail - Unicus">
+    <PageTemplate title="Discover More - Unicus">
       <section className="grid place-items-center">
         <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
           <PageSentence
@@ -399,9 +399,9 @@ const ServiceDetail = () => {
           />
         </div>
       </section>
-      
+
       <LineDivider />
-      
+
       <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
         <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
           <figure className="w-full h-[450px] relative">
@@ -431,7 +431,7 @@ const ServiceDetail = () => {
                   <li>Fine art integration with lighting and furniture</li>
                 </>
               )}
-              
+
               {serviceType === 'digital' && (
                 <>
                   <li>Data-driven strategies for measurable results</li>
@@ -451,7 +451,7 @@ const ServiceDetail = () => {
                   <li>User experience optimization for engagement</li>
                 </>
               )}
-              
+
               {serviceType === 'erp' && (
                 <>
                   <li>100% customizable modules for any industry</li>

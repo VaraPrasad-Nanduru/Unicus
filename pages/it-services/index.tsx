@@ -87,7 +87,7 @@ const ITServices = () => {
                 icon={<FiBarChart />}
               />
             </aside>
-            <TextArrowLink label="Service Detail" href="/services-detail?type=digital" />
+            <TextArrowLink label="Discover More" href="/services-detail?type=digital" />
           </div>
         </aside>
       </section>
@@ -111,12 +111,12 @@ const ITServices = () => {
                 icon={<FiUsers />}
                 title="Social Media Campaigns"
               />
-              <CardListIcon 
-                icon={<FiTarget />} 
-                title="Paid Advertising & PPC" 
+              <CardListIcon
+                icon={<FiTarget />}
+                title="Paid Advertising & PPC"
               />
             </aside>
-            <TextArrowLink label="Service Detail" href="/services-detail?type=digital" />
+            <TextArrowLink label="Discover More" href="/services-detail?type=digital" />
           </div>
         </aside>
         <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
@@ -157,7 +157,7 @@ const ITServices = () => {
               <IconListItem icon={<FiTarget />} value='Conversion Optimization' />
               <IconListItem icon={<FiTrendingUp />} value='Performance Analytics' />
             </aside>
-            <TextArrowLink label="Service Detail" href="/services-detail?type=digital" />
+            <TextArrowLink label="Discover More" href="/services-detail?type=digital" />
           </div>
         </aside>
       </section>
@@ -198,7 +198,7 @@ const ITServices = () => {
                 icon={<FiTrendingUp />}
               />
             </aside>
-            <TextArrowLink label="Service Detail" href="/services-detail?type=development" />
+            <TextArrowLink label="Discover More" href="/services-detail?type=development" />
           </div>
         </aside>
       </section>
@@ -222,12 +222,12 @@ const ITServices = () => {
                 icon={<FiCode />}
                 title="Cross-Platform Solutions"
               />
-              <CardListIcon 
-                icon={<FiUsers />} 
-                title="User Experience Focus" 
+              <CardListIcon
+                icon={<FiUsers />}
+                title="User Experience Focus"
               />
             </aside>
-            <TextArrowLink label="Service Detail" href="/services-detail?type=development" />
+            <TextArrowLink label="Discover More" href="/services-detail?type=development" />
           </div>
         </aside>
         <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
@@ -268,7 +268,7 @@ const ITServices = () => {
               <IconListItem icon={<FiShield />} value='Secure & Scalable' />
               <IconListItem icon={<FiCode />} value='Custom Solutions' />
             </aside>
-            <TextArrowLink label="Service Detail" href="/services-detail?type=development" />
+            <TextArrowLink label="Discover More" href="/services-detail?type=development" />
           </div>
         </aside>
       </section>
@@ -309,13 +309,13 @@ const ITServices = () => {
                 icon={<FiBookOpen />}
               />
             </aside>
-            <TextArrowLink label="Service Detail" href="/services-detail?type=erp" />
+            <TextArrowLink label="Discover More" href="/services-detail?type=erp" />
           </div>
         </aside>
       </section>
 
       <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
-                <aside className="grid gap-12 place-items-center" data-aos="fade-up-right">
+        <aside className="grid gap-12 place-items-center" data-aos="fade-up-right">
           <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
             <SectionSentence
               badge="SECTOR-SPECIFIC ERP"
@@ -333,12 +333,12 @@ const ITServices = () => {
                 icon={<FiMapPin />}
                 title="Government ERP - Administrative Process Optimization"
               />
-              <CardListIcon 
-                icon={<FiZap />} 
-                title="Utility ERP - Service Delivery & Compliance" 
+              <CardListIcon
+                icon={<FiZap />}
+                title="Utility ERP - Service Delivery & Compliance"
               />
             </aside>
-            <TextArrowLink label="Service Detail" href="/services-detail?type=erp" />
+            <TextArrowLink label="Discover More" href="/services-detail?type=erp" />
           </div>
         </aside>
         <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
@@ -381,7 +381,7 @@ const ITServices = () => {
               <IconListItem icon={<FiShield />} value='Secure Data Management' />
               <IconListItem icon={<FiCode />} value='Third-Party Tool Integration' />
             </aside>
-            <TextArrowLink label="Service Detail" href="/services-detail?type=erp" />
+            <TextArrowLink label="Discover More" href="/services-detail?type=erp" />
           </div>
         </aside>
       </section>
@@ -421,16 +421,14 @@ const ITServices = () => {
               <div key={service.id} className="flex">
                 <button
                   onClick={() => setActiveService(service.id)}
-                  className={`w-full p-6 rounded-lg border-2 transition-all duration-300 text-left ${
-                    activeService === service.id
+                  className={`w-full p-6 rounded-lg border-2 transition-all duration-300 text-left ${activeService === service.id
                       ? 'border-primary bg-primaryLight text-white'
                       : 'border-borderLight bg-light text-muted hover:border-primary hover:bg-primaryLight hover:text-white'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-start gap-4">
-                    <div className={`text-2xl ${
-                      activeService === service.id ? 'text-primary' : 'text-muted'
-                    }`}>
+                    <div className={`text-2xl ${activeService === service.id ? 'text-primary' : 'text-muted'
+                      }`}>
                       {service.icon}
                     </div>
                     <div>
