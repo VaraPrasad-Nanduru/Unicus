@@ -18,14 +18,14 @@ const Home = () => {
         {/* Banner Section */}
         {/* !mt-2 !mb-0 */}
         <section
-          className="flex flex-col gap-10 items-center !mt-2 !mb-0"
+          className="flex flex-col gap-10 items-center"
           data-aos="fade-up"
         >
           <div className="w-10/12 md:w-8/12 text-center">
             <PageSentence
               title="We Design Solutions. We Develop Systems. We Transform Spaces."
               description="From smart ERP systems that streamline operations across education, healthcare, and business sectors, to personalized interior designs that transform spaces into works of art - we deliver comprehensive solutions tailored to your unique needs. Quality and innovation, delivered efficiently."
-              badge="DUAL-EXPERTISE-SOLUTIONS"
+            /*badge="DUAL-EXPERTISE-SOLUTIONS"*/
             />
           </div>
           <div className="flex flex-col gap-6 sm:flex-row w-full sm:w-fit">
@@ -154,17 +154,17 @@ const Home = () => {
               badge="GET STARTED"
             />
           </div>
-                    <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 items-stretch">
+          <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 items-stretch">
             <div data-aos="fade-up-right" className="flex">
               <PricingCard
-                price="1200$"
+                price=""
                 title="Interior Design & Art"
                 features={[
-                  'Custom artworks & murals',
-                  'Complete interior solutions',
-                  'Eco-friendly alternatives',
-                  'Artist collaboration',
-                ]}
+                  //   'Custom artworks & murals',
+                  //   'Complete interior solutions',
+                  //   'Eco-friendly alternatives',
+                  //   'Artist collaboration',
+                  'Consultation starts from 10,000']}
               />
             </div>
             <div data-aos="fade-up" data-aos-delay="300" className="flex">
