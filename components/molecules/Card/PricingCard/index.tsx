@@ -12,7 +12,7 @@ const PricingCard = ({
   title,
   price,
   features,
-  buttonOnclick = () => {},
+  buttonOnclick = () => { },
 }: Props) => {
   const [isHovered, setIsHovered] = useState<boolean>()
   return (
@@ -24,16 +24,16 @@ const PricingCard = ({
       <div className="flex flex-row place-content-between items-start py-8 border-b border-borderLight">
         <Text value={title} textStyle="PricingTitle" />
         <div className="">
-          <Text value="Starting From" textStyle="PricingSubtitle" />
-          <Text value={price} textStyle="PricingPrice" />
+          {/* <Text value="Starting From" textStyle="PricingSubtitle" /> */}
+          {/* <Text value={price} textStyle="PricingPrice" /> */}
         </div>
       </div>
       <div className="text-center py-9">
         {features.map((feature) => (
-          <Text  key={randomString(64)} value={feature} textStyle="PricingDetail" />
+          <Text key={randomString(64)} value={feature} textStyle="PricingDetail" />
         ))}
       </div>
-      <Button value="Detail" onClick={buttonOnclick} color={isHovered ? 'primary' : 'white'} />
+      <Button value="Book now" onClick={buttonOnclick} color={isHovered ? 'primary' : 'white'} />
     </div>
   )
 }
