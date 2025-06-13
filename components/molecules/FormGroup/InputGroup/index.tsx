@@ -29,7 +29,7 @@ const TextAreaGroup: React.FC<TextAreaGroupProps> = ({
         onChange={onChange}
         placeholder={placeholder}
         required={required}
-        className="w-full p-2 border rounded"
+        className="w-full border rounded"
       />
     </div>
   )

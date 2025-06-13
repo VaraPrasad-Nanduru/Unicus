@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
 
   return (
     <PageTemplate title='Contact - Unicus'>
-      <section className="grid grid-cols-1 place-items-center gap-10 lg:gap-5 lg:grid-cols-2">
+      <section className="grid grid-cols-1 place-items-center gap-10 lg:gap-5 lg:grid-cols-2 mt-4 mb-2">
         <aside className="w-full sm:w-10/12 md:w-8/12 grid grid-cols-1 gap-12 sm:place-items-center lg:w-full lg:place-items-start" data-aos="fade-up-right">
           <div className="sm:text-center lg:text-left">
             <PageSentence
