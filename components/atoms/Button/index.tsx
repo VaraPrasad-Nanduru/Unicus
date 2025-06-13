@@ -7,6 +7,8 @@ interface ButtonProps {
   style?: 'light' | 'outline' | 'solid'
   color?: 'white' | 'primary'
   radius?: 'pill' | 'rounded'
+  type?: 'button' | 'submit' | 'reset' // <-- Add this
+  disabled?: boolean // <-- Add this
 }
 const Button = forwardRef(
   (
@@ -17,6 +19,8 @@ const Button = forwardRef(
       style = 'solid',
       color = 'primary',
       radius = 'rounded',
+      type = 'button', // <-- Add this
+      disabled = false, // <-- Add this
     }: ButtonProps,
     ref: React.LegacyRef<HTMLButtonElement>
   ) => {
@@ -69,6 +73,8 @@ const Button = forwardRef(
           }`}
           onClick={onClick}
           ref={ref}
+          type={type} // <-- Forward type
+          disabled={disabled} // <-- Forward disabled
         >
           {value}
         </button>

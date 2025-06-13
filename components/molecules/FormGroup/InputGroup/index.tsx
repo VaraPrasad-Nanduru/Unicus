@@ -1,36 +1,38 @@
-import Input, { InputProps } from 'components/atoms/Form/Input'
+import React, { ChangeEvent } from 'react'
 import Label from 'components/atoms/Label'
-import { useEffect, useState } from 'react'
-import randomString from 'utils/randomString'
 
-interface InputGroupProps extends InputProps {
+export interface TextAreaGroupProps {
   label: string
+  name?: string
+  value?: string
+  onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void
+  placeholder?: string
+  required?: boolean
 }
-const InputGroup = ({
+
+const TextAreaGroup: React.FC<TextAreaGroupProps> = ({
   label,
-  defaultValue,
+  name,
+  value,
   onChange,
-  onSubmit,
-  required,
   placeholder,
-}: InputGroupProps) => {
-  const [randomId, setRandomId] = useState<string>('')
-  useEffect(() => {
-    setRandomId(randomString(64))
-  }, [])
+  required,
+}) => {
+  const id = name || label.replace(/\s+/g, '-').toLowerCase()
   return (
     <div className="space-y-1.5">
-      <Label label={label} htmlFor={randomId} />
-      <Input
-        defaultValue={defaultValue}
-        id={randomId}
+      <Label label={label} htmlFor={id} />
+      <textarea
+        id={id}
+        name={name}
+        value={value}
         onChange={onChange}
-        onSubmit={onSubmit}
         placeholder={placeholder}
         required={required}
+        className="w-full p-2 border rounded"
       />
     </div>
   )
 }
 
-export default InputGroup
+export default TextAreaGroup
