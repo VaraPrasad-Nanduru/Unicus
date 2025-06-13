@@ -5,10 +5,14 @@ import randomString from 'utils/randomString'
 
 interface TextAreaGroupProps extends TextAreaProps {
   label: string
+  name?: string
 }
+
 const TextAreaGroup = ({
   label,
+  name,
   defaultValue,
+  value,
   onChange,
   onSubmit,
   required,
@@ -17,14 +21,16 @@ const TextAreaGroup = ({
 }: TextAreaGroupProps) => {
   const [randomId, setRandomId] = useState<string>('')
   useEffect(() => {
-    setRandomId(randomString(64)) 
+    setRandomId(randomString(64))
   }, [])
   return (
     <div className="space-y-1.5">
       <Label label={label} htmlFor={randomId} />
       <TextArea
-        defaultValue={defaultValue}
         id={randomId}
+        name={name}
+        defaultValue={defaultValue}
+        value={value}
         onChange={onChange}
         onSubmit={onSubmit}
         placeholder={placeholder}
