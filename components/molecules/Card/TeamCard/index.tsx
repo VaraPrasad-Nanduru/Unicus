@@ -1,6 +1,8 @@
 import Text from 'components/atoms/Text'
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
+import { FaLinkedin } from 'react-icons/fa'
+
 interface TeamCardProps {
   imageSrc: string
   name: string
