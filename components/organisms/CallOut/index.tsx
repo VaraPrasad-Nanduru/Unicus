@@ -9,7 +9,7 @@ const CallOut = () => {
       <LineDivider />
       <section className="grid grid-cols-1 gap-8 place-items-center m-0 py-12 lg:grid-cols-2">
         <div className="text-center sm:w-8/12 md:w-10/12 lg:w-full lg:text-left">
-          <SectionSentence title="We've prepared everything, it's time for you to tell the requirement" />
+          <SectionSentence title="Our journey began with a mission: to unite developers and fine artists. Now, we're ready to be a part of your story. Let's create something unique together." />
         </div>
         <div className="flex flex-col gap-5 w-full sm:w-fit sm:flex-row lg:w-full lg:justify-end">
           <ButtonLink value="Enquiry " href="/quote" />
