@@ -82,12 +82,12 @@ const Contact: React.FC = () => {
           <div className="space-y-6">
             <IconListItem
               label="Phone"
-              value="+62 1234 8921"
+              value="+91 9036387160"
               icon={<FiPhoneCall />}
             />
             <IconListItem
               label="Email"
-              value="support@Unicus.tld"
+              value="support@Unicuscore.com"
               icon={<FiMail />}
             />
           </div>
