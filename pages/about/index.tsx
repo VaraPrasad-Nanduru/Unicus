@@ -7,6 +7,7 @@ import StatisticList from 'components/organisms/StatisticList'
 import PageTemplate from 'components/templates/PageTemplate'
 import Image from 'next/image'
 import React from 'react'
+import { FaLinkedin } from 'react-icons/fa';
 
 const About = () => {
   return (
@@ -67,26 +68,27 @@ const About = () => {
         <div className="w-full grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           <div data-aos="fade-up">
             <TeamCard
-              imageSrc="/images/team-1.webp"
+              imageSrc="/images/Dheekshetha1.webp"
               job="Founder"
-              name="Albert Flores"
+              name="K Dheekshetha"
+
             />
           </div>
           <div data-aos="fade-up">
             <TeamCard
-              imageSrc="/images/team-2.webp"
-              job="Chief Technology Officer"
-              name="Devon Lane"
+              imageSrc="/images/Aditya.webp"
+              job="Co-founder"
+              name="Aditya Shekhar"
             />
           </div>
           <div data-aos="fade-up">
             <TeamCard
-              imageSrc="/images/team-3.webp"
-              job="UI Designer"
-              name="Darrell Steward"
+              imageSrc="/images/Roshan.webp"
+              job="Marketing Head"
+              name="Roshan Kautilya"
             />
           </div>
-          <div data-aos="fade-up">
+          {/* <div data-aos="fade-up">
             <TeamCard
               imageSrc="/images/team-4.webp"
               job="Software Engineer"
@@ -106,7 +108,7 @@ const About = () => {
               job="FullStack Developer"
               name="Kamal Nanduru"
             />
-          </div>
+          </div> */}
         </div>
       </section>
     </PageTemplate>
