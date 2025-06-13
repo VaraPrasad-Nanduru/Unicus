@@ -158,36 +158,27 @@ const Home = () => {
             <div data-aos="fade-up-right" className="flex">
               <PricingCard
                 price="1200$"
-                title="Interior Design & Art"
+                title="Fine Art Interior Designing"
                 features={[
-                  'Custom artworks & murals',
-                  'Complete interior solutions',
-                  'Eco-friendly alternatives',
-                  'Artist collaboration',
+                  'Consultation starts from 10,000'
                 ]}
               />
             </div>
             <div data-aos="fade-up" data-aos-delay="300" className="flex">
               <PricingCard
                 price="5000$"
-                title="ERP & Software Solutions"
+                title="Erp & software Solutions"
                 features={[
-                  'Smart ERP systems',
-                  'Software development',
-                  'Scalable & secure',
-                  'Multi-sector support',
+                  'Consultation starts from 10,000'
                 ]}
               />
             </div>
             <div data-aos="fade-up-left" className="flex">
               <PricingCard
                 price="3000$"
-                title="Digital & Web Services"
+                title="Digital & Web services"
                 features={[
-                  'Digital marketing campaigns',
-                  'web development',
-                  'Mobile app development',
-                  'SEO & social media',
+                  'Consultation starts from 3,000'
                 ]}
               />
             </div>
