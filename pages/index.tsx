@@ -23,7 +23,7 @@ const Home = () => {
         >
           <div className="w-10/12 md:w-8/12 text-center">
             <PageSentence
-              title="We Design Solutions. We Develop Systems. We Transform Spaces."
+              title="We Design Solutions. We Develop Systems. We Reimagine Spaces."
               description="From smart ERP systems that streamline operations across education, healthcare, and business sectors, to personalized interior designs that transform spaces into works of art - we deliver comprehensive solutions tailored to your unique needs. Quality and innovation, delivered efficiently."
             // badge="DUAL-EXPERTISE-SOLUTIONS"
             />
