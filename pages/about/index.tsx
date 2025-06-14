@@ -71,7 +71,6 @@ const About = () => {
               imageSrc="/images/Dheekshetha2.webp"
               job="Founder"
               name="K Dheekshetha"
-
             />
           </div>
           <div data-aos="fade-up">
@@ -86,6 +85,7 @@ const About = () => {
               imageSrc="/images/Roshan.webp"
               job="Marketing Head"
               name="Roshan Kautilya"
+              linkedinUrl='https://www.linkedin.com/in/kautilyaroshan/'
             />
           </div>
           {/* <div data-aos="fade-up">

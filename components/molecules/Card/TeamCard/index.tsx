@@ -7,26 +7,39 @@ interface TeamCardProps {
   imageSrc: string
   name: string
   job: string
+  linkedinUrl?: string
 }
-const TeamCard = ({ imageSrc, job, name }: TeamCardProps) => {
+
+const TeamCard = ({ imageSrc, job, name, linkedinUrl }: TeamCardProps) => {
   const container: React.LegacyRef<HTMLDivElement> = useRef(null)
   const [imageSize, setImageSize] = useState({ width: 328, height: 356 })
+  
   useEffect(() => {
-    if (container.current?.clientWidth !== undefined) {
-      setImageSize({
-        width: container.current?.clientWidth,
-        height: container.current?.clientWidth * 1.1,
-      })
-    }
-    window.addEventListener('resize', () => {
+    const handleResize = () => {
       if (container.current?.clientWidth !== undefined) {
         setImageSize({
           width: container.current?.clientWidth,
           height: container.current?.clientWidth * 1.085,
         })
       }
-    })
-  }, [container])
+    }
+
+    // Initial size calculation
+    handleResize()
+
+    // Add event listener
+    window.addEventListener('resize', handleResize)
+
+    // Cleanup
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  const handleLinkedInClick = () => {
+    if (linkedinUrl) {
+      window.open(linkedinUrl, '_blank', 'noopener,noreferrer')
+    }
+  }
+
   return (
     <div className="w-full rounded-md overflow-hidden" ref={container}>
       <div className="w-full relative">
@@ -39,8 +52,21 @@ const TeamCard = ({ imageSrc, job, name }: TeamCardProps) => {
         />
       </div>
       <div className="w-full bg-light px-8 py-7 grid gap-2">
-        <Text textStyle="TeamName" value={name} />
-        <Text textStyle="TeamJob" value={job} />
+        <div className="flex items-center justify-between">
+          <div className="flex-1">
+            <Text textStyle="TeamName" value={name} />
+            <Text textStyle="TeamJob" value={job} />
+          </div>
+          {linkedinUrl && (
+            <button
+              onClick={handleLinkedInClick}
+              className="ml-4 p-2 text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+              aria-label={`View ${name}'s LinkedIn profile`}
+            >
+              <FaLinkedin size={20} />
+            </button>
+          )}
+        </div>
       </div>
     </div>
   )
