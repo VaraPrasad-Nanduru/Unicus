@@ -196,8 +196,8 @@ quality, and efficiency - delivered seamlessly.
         <section className="flex flex-col gap-16 items-center">
           <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12" data-aos="zoom-in-up">
             <SectionSentence
-              title="What do our clients say that we never let down?"
-              badge="Client stories"
+              title="Real results. Real impact. See how Unicus has helped clients transform their spaces and streamline their systems."
+              badge="Success Stories"
             />
           </div>
           <div className="w-full" data-aos="fade-up">
