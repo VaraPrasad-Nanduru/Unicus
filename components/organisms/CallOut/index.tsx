@@ -12,7 +12,7 @@ const CallOut = () => {
           <SectionSentence title="Our journey began with a mission: to unite developers and fine artists. Now, we're ready to be a part of your story. Let's create something unique together." />
         </div>
         <div className="flex flex-col gap-5 w-full sm:w-fit sm:flex-row lg:w-full lg:justify-end">
-          <ButtonLink value="Enquiry " href="/quote" />
+          <ButtonLink value="Inquiry " href="/quote" />
           <ButtonLink value="Ask Us" color="white" style="light" href="/faq" />
         </div>
       </section>

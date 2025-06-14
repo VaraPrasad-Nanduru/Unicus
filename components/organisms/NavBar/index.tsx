@@ -88,7 +88,7 @@ const NavBar = () => {
                 } lg:block mt-6 lg:mt-0 lg:ml-4`}
               >
                 <ButtonLink
-                  value="Contact"
+                  value="Contact Us"
                   style="light"
                   color="white"
                   size="small"

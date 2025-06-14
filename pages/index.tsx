@@ -23,42 +23,50 @@ const Home = () => {
         >
           <div className="w-10/12 md:w-8/12 text-center">
             <PageSentence
-              title="We Design Solutions. We Develop Systems. We Transform Spaces."
-              description="From smart ERP systems that streamline operations across education, healthcare, and business sectors, to personalized interior designs that transform spaces into works of art - we deliver comprehensive solutions tailored to your unique needs. Quality and innovation, delivered efficiently."
+              title="We Design Solutions. We Develop Systems. We Reimagine Spaces."
+              description="From smart, scalable ERP systems that drive efficiency across retail, utilities, education,
+government and healthcare, to bespoke fine art interior designs that transform spaces into
+visual masterpieces - we deliver end-to-end solutions shaped by your unique vision. Innovation,
+quality, and efficiency - delivered seamlessly.
+"
             // badge="DUAL-EXPERTISE-SOLUTIONS"
             />
           </div>
           <div className="flex flex-col gap-6 sm:flex-row w-full sm:w-fit">
-            <ButtonLink value="Enquiry " href="/quote" />
             <ButtonLink
+              value="Inquiry"
+              // href="/quote"
+              href="/contact"
+            />
+            {/* <ButtonLink
               value="Learn More"
               color="white"
               style="light"
               href="/about"
-            />
+            /> */}
           </div>
         </section>
         {/* Feature List */}
         <section className="grid grid-cols-1 gap-5 md:grid-cols-3 mb-16">
           <div data-aos="fade-up">
             <FeatureCard
-              title="Interior Design & Art"
-              description="Custom artworks, complete interior solutions, and artistic transformations that blend creativity with functionality for unique spaces."
-              icon={<FiHome />}
-            />
-          </div>
-          <div data-aos="fade-up">
-            <FeatureCard
-              title="ERP & Software Solutions"
+              title="ERP Services"
               description="Smart ERP systems, custom software development, and digital solutions that streamline operations across various sectors."
               icon={<FiMonitor />}
             />
           </div>
           <div data-aos="fade-up">
             <FeatureCard
-              title="Digital & Web Services"
+              title="IT Services"
               description="Comprehensive digital marketing, responsive web development, and mobile app solutions to boost your online presence."
               icon={<FiSmartphone />}
+            />
+          </div>
+          <div data-aos="fade-up">
+            <FeatureCard
+              title="Fine Art Interior Services"
+              description="Custom artworks, complete interior solutions, and artistic transformations that blend creativity with functionality for unique spaces."
+              icon={<FiHome />}
             />
           </div>
         </section>
@@ -94,13 +102,13 @@ const Home = () => {
                 paragraph="Our multidisciplinary team brings together software engineers, ERP specialists, interior designers, fine artists, and digital marketing experts. This unique blend of technical prowess and creative excellence enables us to deliver comprehensive solutions across both digital and physical spaces."
                 badge="OUR TEAM"
               />
-              <ButtonLink
+              {/* <ButtonLink
                 value="See Our Teams"
                 href="/teams"
                 size="small"
                 color="white"
                 style="light"
-              />
+              /> */}
             </div>
           </aside>
           <aside
@@ -150,7 +158,7 @@ const Home = () => {
             data-aos="zoom-in-up"
           >
             <SectionSentence
-              title="What do you need? Choose a service that can help you"
+              title="Select a Service Crafted for Your Needs"
               badge="GET STARTED"
             />
           </div>
@@ -160,7 +168,7 @@ const Home = () => {
                 price="1200$"
                 title="Fine Art Interior Designing"
                 features={[
-                  'Consultation starts from 10,000'
+                  'Consultation starts from ₹10,000'
                 ]}
               />
             </div>
@@ -169,7 +177,7 @@ const Home = () => {
                 price="5000$"
                 title="Erp & software Solutions"
                 features={[
-                  'Consultation starts from 10,000'
+                  'Consultation starts from ₹10,000'
                 ]}
               />
             </div>
@@ -178,7 +186,7 @@ const Home = () => {
                 price="3000$"
                 title="Digital & Web services"
                 features={[
-                  'Consultation starts from 3,000'
+                  'Consultation starts from ₹3,000'
                 ]}
               />
             </div>

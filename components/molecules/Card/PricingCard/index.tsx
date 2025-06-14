@@ -21,12 +21,10 @@ const PricingCard = ({
       onMouseOver={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="flex flex-row place-content-between items-start py-8 border-b border-borderLight">
+      <div className="text-center py-8 border-b border-borderLight">
         <Text value={title} textStyle="PricingTitle" />
-        <div className="">
-          {/* <Text value="Starting From" textStyle="PricingSubtitle" /> */}
-          {/* <Text value={price} textStyle="PricingPrice" /> */}
-        </div>
+        {/* <Text value="Starting From" textStyle="PricingSubtitle" /> */}
+        {/* <Text value={price} textStyle="PricingPrice" /> */}
       </div>
       <div className="text-center py-9">
         {features.map((feature) => (
