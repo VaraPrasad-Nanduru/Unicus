@@ -87,7 +87,7 @@ const Contact: React.FC = () => {
             />
             <IconListItem
               label="Email"
-              value="support@Unicuscore.com"
+              value="support@unicuscore.com"
               icon={<FiMail />}
             />
           </div>

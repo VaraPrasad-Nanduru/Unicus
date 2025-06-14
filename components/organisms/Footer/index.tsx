@@ -2,7 +2,8 @@ import NavBrand from 'components/atoms/NavBrand'
 import NavLink from 'components/atoms/NavLink'
 import Text from 'components/atoms/Text'
 import React from 'react'
-import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -27,7 +28,7 @@ const Footer = () => {
                   <FaLinkedin className="h-5 w-5 text-gray-500 hover:text-gray-700 transition-colors duration-300" />
                 </a>
                 <a href="https://x.com/unicuscore" target="_blank" rel="noopener noreferrer" aria-label="X">
-                  <FaTwitter className="h-5 w-5 text-gray-500 hover:text-gray-700 transition-colors duration-300" />
+                  <FaXTwitter className="h-5 w-5 text-gray-500 hover:text-gray-700 transition-colors duration-300" />
                 </a>
                 <a href="https://www.facebook.com/people/Unicus-Core/61577070007965/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <FaFacebook className="h-5 w-5 text-gray-500 hover:text-gray-700 transition-colors duration-300" />
