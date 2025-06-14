@@ -5,7 +5,9 @@ import TextAreaGroup from 'components/molecules/FormGroup/TextAreaGroup'
 import IconListItem from 'components/molecules/IconListItem'
 import PageSentence from 'components/molecules/PageSentence'
 import PageTemplate from 'components/templates/PageTemplate'
-import { FiMail, FiPhoneCall, FiMapPin } from 'react-icons/fi'
+import { FiMail, FiPhoneCall } from 'react-icons/fi'
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
 const GOOGLE_FORM_ACTION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSco57ETmn7ytxFZE2dJxOyPBPlRpyAWgndIK7lmJRehQctDMQ/formResponse'
 // Replace the entry IDs below with your actual Google Form field entry IDs
@@ -58,6 +60,7 @@ const Contact: React.FC = () => {
       mode: 'no-cors',
       body: formData,
     })
+
     setSubmitted(true)
     setForm({
       firstName: '',
@@ -70,9 +73,12 @@ const Contact: React.FC = () => {
   }
 
   return (
-    <PageTemplate title='Contact - Unicus'>
+    <PageTemplate title="Contact - Unicus">
       <section className="grid grid-cols-1 place-items-center gap-10 lg:gap-5 lg:grid-cols-2 mt-4 mb-2">
-        <aside className="w-full sm:w-10/12 md:w-8/12 grid grid-cols-1 gap-12 sm:place-items-center lg:w-full lg:place-items-start" data-aos="fade-up-right">
+        <aside
+          className="w-full sm:w-10/12 md:w-8/12 grid grid-cols-1 gap-12 sm:place-items-center lg:w-full lg:place-items-start"
+          data-aos="fade-up-right"
+        >
           <div className="sm:text-center lg:text-left">
             <PageSentence
               title="We love receiving messages from you, we are waiting for it."
@@ -92,7 +98,11 @@ const Contact: React.FC = () => {
             />
           </div>
         </aside>
-        <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full lg:flex lg:justify-end" data-aos="fade-down-left">
+
+        <aside
+          className="w-full sm:w-10/12 md:w-8/12 lg:w-full lg:flex lg:justify-end"
+          data-aos="fade-down-left"
+        >
           <form
             className="grid grid-cols-1 gap-7 p-6 md:p-9 bg-light rounded-md lg:w-10/12"
             onSubmit={handleSubmit}
@@ -119,13 +129,33 @@ const Contact: React.FC = () => {
                 onChange={handleChange}
                 required
               />
-              <InputGroup
-                label="Phone Number"
-                name="phone"
-                value={form.phone}
-                onChange={handleChange}
-              />
+              <div className="flex flex-col">
+                <label className="mb-1 text-white font-medium text-sm">Phone Number</label>
+                <PhoneInput
+                  country={'in'}
+                  value={form.phone}
+                  onChange={(value: string) => setForm({ ...form, phone: value })}
+                  inputProps={{
+                    name: 'phone',
+                    required: true,
+                    autoFocus: false,
+                  }}
+                  containerStyle={{ width: '100%' }}
+                  inputStyle={{
+                    width: '100%',
+                    height: '42px',
+                    borderRadius: '6px',
+                    border: '1px solid #ddd',
+                    paddingLeft: '48px',
+                  }}
+                  buttonStyle={{
+                    border: 'none',
+                    backgroundColor: 'transparent',
+                  }}
+                />
+              </div>
             </div>
+
             <InputGroup
               label="Organisation Name"
               name="organisation"
@@ -140,7 +170,11 @@ const Contact: React.FC = () => {
               placeholder="Tell us about your project, idea, or inquiry"
               required
             />
-            <Button value={submitted ? "Message Sent!" : "Send Message"} type="submit" disabled={submitted} />
+            <Button
+              value={submitted ? 'Message Sent!' : 'Send Message'}
+              type="submit"
+              disabled={submitted}
+            />
             {submitted && (
               <p className="text-green-600 mt-2">Thank you for contacting us!</p>
             )}
