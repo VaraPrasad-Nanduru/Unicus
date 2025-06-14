@@ -158,7 +158,7 @@ quality, and efficiency - delivered seamlessly.
             data-aos="zoom-in-up"
           >
             <SectionSentence
-              title="What do you need? Choose a service that can help you"
+              title="Select a Service Crafted for Your Needs"
               badge="GET STARTED"
             />
           </div>
