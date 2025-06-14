@@ -168,7 +168,7 @@ quality, and efficiency - delivered seamlessly.
                 price="1200$"
                 title="Fine Art Interior Designing"
                 features={[
-                  'Consultation starts from 10,000'
+                  'Consultation starts from ₹10,000'
                 ]}
               />
             </div>
@@ -177,7 +177,7 @@ quality, and efficiency - delivered seamlessly.
                 price="5000$"
                 title="Erp & software Solutions"
                 features={[
-                  'Consultation starts from 10,000'
+                  'Consultation starts from ₹10,000'
                 ]}
               />
             </div>
@@ -186,7 +186,7 @@ quality, and efficiency - delivered seamlessly.
                 price="3000$"
                 title="Digital & Web services"
                 features={[
-                  'Consultation starts from 3,000'
+                  'Consultation starts from ₹3,000'
                 ]}
               />
             </div>
