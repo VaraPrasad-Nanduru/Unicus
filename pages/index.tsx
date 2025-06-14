@@ -33,11 +33,11 @@ quality, and efficiency - delivered seamlessly.
             />
           </div>
           <div className="flex flex-col gap-6 sm:flex-row w-full sm:w-fit">
-            <ButtonLink 
-            value="Inquiry" 
-            // href="/quote"
-            href="/contact"
-             />
+            <ButtonLink
+              value="Inquiry"
+              // href="/quote"
+              href="/contact"
+            />
             {/* <ButtonLink
               value="Learn More"
               color="white"
@@ -50,23 +50,23 @@ quality, and efficiency - delivered seamlessly.
         <section className="grid grid-cols-1 gap-5 md:grid-cols-3 mb-16">
           <div data-aos="fade-up">
             <FeatureCard
-              title="Interior Design & Art"
-              description="Custom artworks, complete interior solutions, and artistic transformations that blend creativity with functionality for unique spaces."
-              icon={<FiHome />}
-            />
-          </div>
-          <div data-aos="fade-up">
-            <FeatureCard
-              title="ERP & Software Solutions"
+              title="ERP Services"
               description="Smart ERP systems, custom software development, and digital solutions that streamline operations across various sectors."
               icon={<FiMonitor />}
             />
           </div>
           <div data-aos="fade-up">
             <FeatureCard
-              title="Digital & Web Services"
+              title="IT Services"
               description="Comprehensive digital marketing, responsive web development, and mobile app solutions to boost your online presence."
               icon={<FiSmartphone />}
+            />
+          </div>
+          <div data-aos="fade-up">
+            <FeatureCard
+              title="Fine Art Interior Services"
+              description="Custom artworks, complete interior solutions, and artistic transformations that blend creativity with functionality for unique spaces."
+              icon={<FiHome />}
             />
           </div>
         </section>
