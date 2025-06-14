@@ -94,13 +94,13 @@ const Home = () => {
                 paragraph="Our multidisciplinary team brings together software engineers, ERP specialists, interior designers, fine artists, and digital marketing experts. This unique blend of technical prowess and creative excellence enables us to deliver comprehensive solutions across both digital and physical spaces."
                 badge="OUR TEAM"
               />
-              <ButtonLink
+              {/* <ButtonLink
                 value="See Our Teams"
                 href="/teams"
                 size="small"
                 color="white"
                 style="light"
-              />
+              /> */}
             </div>
           </aside>
           <aside
