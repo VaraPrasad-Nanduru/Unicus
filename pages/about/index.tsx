@@ -61,8 +61,8 @@ const About = () => {
           data-aos="zoom-in-up"
         >
           <SectionSentence
-            badge="OUR TEAMS"
-            title="Meet the team! All creative people are here"
+            badge="Meet the team! All creative people are here"
+            title="Visionaries driving smart systems and stunning spaces"
           />
         </div>
         <div className="w-full grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
