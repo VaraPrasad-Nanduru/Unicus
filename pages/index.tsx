@@ -24,18 +24,22 @@ const Home = () => {
           <div className="w-10/12 md:w-8/12 text-center">
             <PageSentence
               title="We Design Solutions. We Develop Systems. We Reimagine Spaces."
-              description="From smart ERP systems that streamline operations across education, healthcare, and business sectors, to personalized interior designs that transform spaces into works of art - we deliver comprehensive solutions tailored to your unique needs. Quality and innovation, delivered efficiently."
+              description="From smart, scalable ERP systems that drive efficiency across retail, utilities, education,
+government and healthcare, to bespoke fine art interior designs that transform spaces into
+visual masterpieces - we deliver end-to-end solutions shaped by your unique vision. Innovation,
+quality, and efficiency - delivered seamlessly.
+"
             // badge="DUAL-EXPERTISE-SOLUTIONS"
             />
           </div>
           <div className="flex flex-col gap-6 sm:flex-row w-full sm:w-fit">
             <ButtonLink value="Inquiry " href="/quote" />
-            <ButtonLink
+            {/* <ButtonLink
               value="Learn More"
               color="white"
               style="light"
               href="/about"
-            />
+            /> */}
           </div>
         </section>
         {/* Feature List */}
