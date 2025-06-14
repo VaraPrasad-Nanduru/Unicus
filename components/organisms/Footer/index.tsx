@@ -4,6 +4,7 @@ import Text from 'components/atoms/Text'
 import React from 'react'
 import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
 
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -24,16 +25,16 @@ const Footer = () => {
               />
               <div className="flex space-x-4 mt-4">
                 <a href="https://www.linkedin.com/company/unicuscore/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <FaLinkedin className="h-5 w-5 text-gray-500 hover:text-gray-700 transition-colors duration-300" />
+                  <FaLinkedin className="h-5 w-5 text-white hover:text-gray-300 transition-colors duration-300" />
                 </a>
                 <a href="https://x.com/unicuscore" target="_blank" rel="noopener noreferrer" aria-label="X">
-                  <FaTwitter className="h-5 w-5 text-gray-500 hover:text-gray-700 transition-colors duration-300" />
+                  <FaTwitter className="h-5 w-5 text-white hover:text-gray-300 transition-colors duration-300" />
                 </a>
                 <a href="https://www.facebook.com/people/Unicus-Core/61577070007965/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                  <FaFacebook className="h-5 w-5 text-gray-500 hover:text-gray-700 transition-colors duration-300" />
+                  <FaFacebook className="h-5 w-5 text-white hover:text-gray-300 transition-colors duration-300" />
                 </a>
                 <a href="https://www.instagram.com/unicuscore/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                  <FaInstagram className="h-5 w-5 text-gray-500 hover:text-gray-700 transition-colors duration-300" />
+                  <FaInstagram className="h-5 w-5 text-white hover:text-gray-300 transition-colors duration-300" />
                 </a>
               </div>
             </div>
@@ -70,7 +71,7 @@ const Footer = () => {
               <Text value="MORE" textStyle="FooterLinkGroupTitle" />
               <div className="space-y-3">
                 {/* <NavLink value="Jobs" href="/jobs" /> */}
-                {/*  <NavLink value="Blogs" href="/blog" /> */}
+                {/* <NavLink value="Blogs" href="/blog" /> */}
                 <NavLink value="Sitemap" href="/sitemap" />
               </div>
             </div>
@@ -80,5 +81,6 @@ const Footer = () => {
     </>
   )
 }
+
 
 export default Footer
