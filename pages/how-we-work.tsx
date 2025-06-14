@@ -13,7 +13,8 @@ const HowWeWork = () => {
           <PageSentence
             badge="HOW WE WORK"
             title="Work flow at Unicus"
-            description="We follow a structured, transparent workflow to deliver high-quality outcomes. whether you're building digital products or transforming physical spaces."
+            description="From idea to execution, we follow a clear, collaborative process to craft
+smart digital products and stunning physical spaces - all tailored to your vision"
           />
         </div>
       </section>
