@@ -68,11 +68,11 @@ const Footer = () => {
             </div>
 
             <div className="space-y-5">
-              <Text value="MORE" textStyle="FooterLinkGroupTitle" />
+              {/* <Text value="MORE" textStyle="FooterLinkGroupTitle" /> */}
               <div className="space-y-3">
                 {/* <NavLink value="Jobs" href="/jobs" /> */}
                 {/* <NavLink value="Blogs" href="/blog" /> */}
-                <NavLink value="Sitemap" href="/sitemap" />
+                {/* <NavLink value="Sitemap" href="/sitemap" /> */}
               </div>
             </div>
           </div>
