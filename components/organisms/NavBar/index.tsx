@@ -61,7 +61,7 @@ const NavBar = () => {
                 <NavLink href="/" value="Home" canActive={true} />
                 <NavLink href="/about" value="About" canActive={true} />
                 <NavLink
-                  href="/interior-services"
+                  href="/erp-services"
                   value="ERP Services"
                   canActive={true}
                 />
@@ -87,7 +87,7 @@ const NavBar = () => {
                   } lg:block mt-6 lg:mt-0 lg:ml-4`}
               >
                 <ButtonLink
-                  value="Contact"
+                  value="Contact Us"
                   style="light"
                   color="white"
                   size="small"
