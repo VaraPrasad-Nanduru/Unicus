@@ -824,7 +824,7 @@ const ITServices = () => {
         <section className="grid place-items-center gap-16">
           <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
             <PageSentence
-              badge="FEATURES"
+              badge="SERVICES"
               title="Here's what you will get when choosing our services"
             />
           </div>
