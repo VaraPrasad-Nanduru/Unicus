@@ -71,7 +71,7 @@ quality, and efficiency - delivered seamlessly.
           </div>
         </section>
         {/* Logo List */}
-        <LogoList />
+        {/* <LogoList /> */}
         {/* How We Work */}
         <section className="grid grid-cols-1 gap-6 sm:gap-8 place-items-center lg:grid-cols-2">
           <aside className="w-full h-[400px] relative" data-aos="fade-right">
@@ -163,19 +163,10 @@ quality, and efficiency - delivered seamlessly.
             />
           </div>
           <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 items-stretch">
-            <div data-aos="fade-up-right" className="flex">
-              <PricingCard
-                price="1200$"
-                title="Fine Art Interior Designing"
-                features={[
-                  'Consultation starts from ₹10,000'
-                ]}
-              />
-            </div>
             <div data-aos="fade-up" data-aos-delay="300" className="flex">
               <PricingCard
                 price="5000$"
-                title="Erp & software Solutions"
+                title="Erp & software Services"
                 features={[
                   'Consultation starts from ₹10,000'
                 ]}
@@ -190,13 +181,22 @@ quality, and efficiency - delivered seamlessly.
                 ]}
               />
             </div>
+            <div data-aos="fade-up-right" className="flex">
+              <PricingCard
+                price="1200$"
+                title="Fine Art Interior Designing"
+                features={[
+                  'Consultation starts from ₹10,000'
+                ]}
+              />
+            </div>
           </div>
         </section>
         {/* Testimonial */}
         <section className="flex flex-col gap-16 items-center">
           <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12" data-aos="zoom-in-up">
             <SectionSentence
-              title="Real results. Real impact. See how Unicus has helped clients transform their spaces and streamline their systems."
+              paragraph="Real results. Real impact. See how Unicus has helped clients transform their spaces and streamline their systems."
               badge="Success Stories"
             />
           </div>

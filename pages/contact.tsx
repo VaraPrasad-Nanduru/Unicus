@@ -8,6 +8,7 @@ import PageTemplate from 'components/templates/PageTemplate'
 import { FiMail, FiPhoneCall } from 'react-icons/fi'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
+import LineDivider from 'components/atoms/LineDivider'
 
 const GOOGLE_FORM_ACTION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSco57ETmn7ytxFZE2dJxOyPBPlRpyAWgndIK7lmJRehQctDMQ/formResponse'
 // Replace the entry IDs below with your actual Google Form field entry IDs
@@ -74,6 +75,17 @@ const Contact: React.FC = () => {
 
   return (
     <PageTemplate title="Contact - Unicus">
+      <section className="grid place-items-center" data-aos="zoom-in-up">
+        <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12">
+          <PageSentence
+            badge="Talk Innovation to Us"
+            title="We're here to help. Reach out today - let’s make something incredible together"
+            description="Got a question, want to collaborate, or just exploring? We're here and happy to help!"
+          />
+        </div>
+      </section>
+
+      <LineDivider />
       <section className="grid grid-cols-1 place-items-center gap-10 lg:gap-5 lg:grid-cols-2 mt-4 mb-2">
         <aside
           className="w-full sm:w-10/12 md:w-8/12 grid grid-cols-1 gap-12 sm:place-items-center lg:w-full lg:place-items-start"
@@ -81,7 +93,7 @@ const Contact: React.FC = () => {
         >
           <div className="sm:text-center lg:text-left">
             <PageSentence
-              title="We love receiving messages from you, we are waiting for it."
+              title="We'd love to hear from you - drop us a message now!"
               badge="CONTACT"
             />
           </div>
@@ -93,7 +105,7 @@ const Contact: React.FC = () => {
             />
             <IconListItem
               label="Email"
-              value="support@Unicuscore.com"
+              value="support@unicuscore.com"
               icon={<FiMail />}
             />
           </div>

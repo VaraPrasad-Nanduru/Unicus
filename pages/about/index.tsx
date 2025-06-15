@@ -30,9 +30,16 @@ const About = () => {
           data-aos="fade-up-left"
         >
           <PageSentence
-            badge="ABOUT"
-            title="We are creative, smart and hardworking innovators"
-            description={`At Unicus, diverse creative minds unite under one roof - bringing together software engineers, ERP specialists, interior designers, fine artists, and digital strategists. We collaborate to deliver exceptional results across both digital solutions and artistic transformations. From smart ERP systems that streamline business operations to bespoke interior designs that transform spaces into works of art, our multidisciplinary team ensures every project reflects innovation, quality, and client satisfaction.`}
+            badge="ABOUT US"
+            title="“Art, Tech & Strategy - All Under One Roof"
+            description={`At Unicus Core, diverse creative minds unite
+under one roof - bringing together software engineers, ERP specialists, interior
+designers, fine artists, and digital strategists. We collaborate to deliver
+exceptional results across both digital solutions and artistic transformations.
+From smart ERP systems that streamline business operations to bespoke interior
+designs that transform spaces into works of art, our multidisciplinary team
+ensures every project reflects innovation, quality, and client satisfaction
+`}
           />
         </aside>
       </section>
