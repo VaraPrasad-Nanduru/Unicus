@@ -12,7 +12,7 @@ const HowWeWork = () => {
         <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 2xl:w-5/12 text-center" data-aos="zoom-in-up">
           <PageSentence
             badge="HOW WE WORK"
-            // title="Work flow at Unicus"
+            // title="Work flow at Unicus Core"
             description="From idea to execution, we follow a clear, collaborative process to craft
 smart digital products and stunning physical spaces - all tailored to your vision"
           />

@@ -134,11 +134,11 @@ const InteriorServices = () => {
 
   return (
     <>
-      <PageTemplate title='Interior Services - Unicus'>
+      <PageTemplate title='Interior Services - Unicus Core'>
         <section className="grid place-items-center" data-aos="zoom-in-up">
           <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12">
             <PageSentence
-              badge="Fine Art Interiror Services"
+              badge="Fine Art Interior Services"
               title="Where Custom Fine Art Transforms Living Spaces into Stories"
               description="At Unicus Core, we don’t just decorate spaces - we personalise them.
 From hand-crafted murals to tailored spatial experiences, we infuse

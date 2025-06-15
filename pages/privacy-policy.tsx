@@ -94,7 +94,7 @@ const PrivacyPolicy = () => {
                         <Text
                             textStyle="PageContent"
                             value={`
-                    At Unicus, we are committed to protecting your personal data. Under the General Data Protection Regulation (GDPR), you have the following rights:<br>
+                    At Unicus Core, we are committed to protecting your personal data. Under the General Data Protection Regulation (GDPR), you have the following rights:<br>
                     - Right to Access: You have the right to request a copy of the personal data we hold about you. A small fee may apply for this service.<br>
                     - Right to Rectification: If you believe any information we hold is inaccurate or incomplete, you have the right to request a correction or update.<br>
                     - Right to Erasure: You can request the deletion of your personal data, subject to certain legal conditions.<br>
