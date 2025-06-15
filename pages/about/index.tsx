@@ -31,7 +31,7 @@ const About = () => {
         >
           <PageSentence
             badge="ABOUT US"
-            title="“Art, Tech & Strategy - All Under One Roof"
+            title="Art, Tech & Strategy - All Under One Roof"
             description={`At Unicus Core, diverse creative minds unite
 under one roof - bringing together software engineers, ERP specialists, interior
 designers, fine artists, and digital strategists. We collaborate to deliver

@@ -252,33 +252,33 @@ const ITServices = () => {
     description: `Comprehensive ERP services designed for hospitals, educational institutes, retail, government, and utility sectors. 100% customizable with cloud-based`,
     features: [
       {
-        title: 'Hospital ERP',
-        description: 'Streamline healthcare operations and patient management',
+        title: 'ERP for Hospitals',
+        description: 'Our Hospital ERP system is designed to simplify these complexities, enabling healthcare providers to focus on delivering exceptional patient care while optimizing operational efficiency',
         icon: <IconComponent type="heart" />,
       },
       {
-        title: 'Educational ERP',
-        description: 'Enhance institutional efficiency and student engagement',
+        title: 'ERP for Education Institutions',
+        description: 'Our Educational ERP system provides a unified platform to streamline operations, enhance student engagement, and improve institutional efficiency.',
         icon: <IconComponent type="book" />,
       },
       {
-        title: 'Retail ERP',
-        description: 'Optimize inventory, sales, and customer satisfaction',
+        title: 'ERP for Retail',
+        description: 'Our Retail ERP system helps retailers streamline operations, improve customer satisfaction, and boost profitability.',
         icon: <IconComponent type="shopping" />,
       },
       {
-        title: 'Government ERP',
-        description: 'Streamline administrative processes and service delivery',
+        title: 'ERP for Government Sector',
+        description: 'Our Government ERP system is designed to streamline administrative processes, improve service delivery, and ensure compliance with regulatory standards.',
         icon: <IconComponent type="map" />,
       },
       {
-        title: 'Utility ERP',
-        description: 'Manage utility operations with industry compliance',
+        title: 'ERP for Utility',
+        description: 'Our Utility ERP system is designed to streamline operations, improve service delivery, and ensure compliance with industry standards.',
         icon: <IconComponent type="zap" />,
       },
       {
-        title: 'Custom Modules',
-        description: '100% customizable solutions for unique business requirements',
+        title: 'ERP for Custom Modules',
+        description: '100% customizable ERP modules tailored to your unique business processes, industry requirements, and operational workflows with flexible configuration options',
         icon: <IconComponent type="settings" />,
       },
     ],
@@ -715,7 +715,7 @@ const ITServices = () => {
             <PageSentence
               badge="ERP & IT SERVICES"
               title="Comprehensive Technology Solutions for Modern Businesses"
-              description="From digital marketing and custom development to enterprise ERP systems, we deliver technology solutions that drive growth and efficiency."
+            // description="From digital marketing and custom development to enterprise ERP systems, we deliver technology solutions that drive growth and efficiency."
             />
           </div>
         </section>
@@ -728,8 +728,8 @@ const ITServices = () => {
                 <button
                   onClick={() => setActiveService(service.id)}
                   className={`w-full p-6 rounded-lg border-2 transition-all duration-300 text-left ${activeService === service.id
-                      ? 'border-primary bg-primaryLight text-white'
-                      : 'border-borderLight bg-light text-muted hover:border-primary hover:bg-primaryLight hover:text-white'
+                    ? 'border-primary bg-primaryLight text-white'
+                    : 'border-borderLight bg-light text-muted hover:border-primary hover:bg-primaryLight hover:text-white'
                     }`}
                 >
                   <div className="flex items-start gap-4">
@@ -755,7 +755,7 @@ const ITServices = () => {
         <LineDivider />
 
         {/* Service Detail Content - Same as service-detail page */}
-        <section className="grid place-items-center">
+        {/* <section className="grid place-items-center">
           <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
             <PageSentence
               badge={currentData.badge}
@@ -764,7 +764,30 @@ const ITServices = () => {
           </div>
         </section>
 
-        <LineDivider />
+        <LineDivider /> */}
+
+        <section className="grid place-items-center gap-16">
+          <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
+            <PageSentence
+              badge="SERVICES"
+              title="Here's what you will get when choosing our services"
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {currentData.features.map((feature) => {
+              return (
+                <div key={randomString(64)} data-aos="fade-up">
+                  <FeatureCard
+                    title={feature.title}
+                    description={feature.description}
+                    icon={feature.icon}
+                    isNaked={true}
+                  />
+                </div>
+              )
+            })}
+          </div>
+        </section>
 
         <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
@@ -821,29 +844,6 @@ const ITServices = () => {
           </aside>
         </section>
 
-        <section className="grid place-items-center gap-16">
-          <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
-            <PageSentence
-              badge="SERVICES"
-              title="Here's what you will get when choosing our services"
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {currentData.features.map((feature) => {
-              return (
-                <div key={randomString(64)} data-aos="fade-up">
-                  <FeatureCard
-                    title={feature.title}
-                    description={feature.description}
-                    icon={feature.icon}
-                    isNaked={true}
-                  />
-                </div>
-              )
-            })}
-          </div>
-        </section>
-
         {/* Additional Service-Specific Section */}
         {activeService === 'digital' && (
           <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
@@ -893,7 +893,137 @@ const ITServices = () => {
           </section>
         )}
 
+        
+        {/* Why Choose Unicus Core ERP Section - Add this after the service-specific sections */}
         {activeService === 'erp' && (
+          <section className="grid place-items-center gap-16">
+            <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
+              <PageSentence
+                badge="WHY CHOOSE UNICUS CORE ERP"
+                title="Advanced ERP Solutions Built for Modern Business Excellence"
+                description="Our ERP systems combine cutting-edge technology with industry expertise to deliver scalable, secure, and fully customizable solutions that grow with your business."
+              />
+            </div>
+
+            {/* Enhanced Grid Layout for ERP Features */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+              {/* 100% Customizable Modules */}
+              <div className="grid gap-4 p-6 border border-gray-700 rounded-lg hover:border-primary transition-colors duration-300" data-aos="fade-up">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <FiSettings className="w-6 h-6 text-primary" />
+                  </div>
+                  <Text textStyle="FAQTitle" value="100% Customizable" />
+                </div>
+                <Text
+                  textStyle="FAQDescription"
+                  value="Fully adaptable modules that can be tailored to match your exact business processes, workflows, and industry-specific requirements without any limitations."
+                />
+              </div>
+
+              {/* Cloud-Based & On-Premise Options */}
+              <div className="grid gap-4 p-6 border border-gray-700 rounded-lg hover:border-primary transition-colors duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <FiGlobe className="w-6 h-6 text-primary" />
+                  </div>
+                  <Text textStyle="FAQTitle" value="Cloud-Based" />
+                </div>
+                <Text
+                  textStyle="FAQDescription"
+                  value="Choose between cloud-based solutions for scalability and accessibility, or on-premise deployment for maximum control and security based on your business needs."
+                />
+              </div>
+
+              {/* Multi-User Access with Role-Based Permissions */}
+              <div className="grid gap-4 p-6 border border-gray-700 rounded-lg hover:border-primary transition-colors duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <FiUsers className="w-6 h-6 text-primary" />
+                  </div>
+                  <Text textStyle="FAQTitle" value="Multi-User Access" />
+                </div>
+                <Text
+                  textStyle="FAQDescription"
+                  value="Multi-User Access with Role-Based Permissions, Advanced multi-user system with granular role-based permissions ensuring the right people have access to the right information at the right time."
+                />
+              </div>
+
+              {/* Real-Time Analytics & Reporting */}
+              <div className="grid gap-4 p-6 border border-gray-700 rounded-lg hover:border-primary transition-colors duration-300" data-aos="fade-up" data-aos-delay="300">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <FiBarChart className="w-6 h-6 text-primary" />
+                  </div>
+                  <Text textStyle="FAQTitle" value="Real-Time Analytics" />
+                </div>
+                <Text
+                  textStyle="FAQDescription"
+                  value="Real-Time Analytics & Reporting, Comprehensive analytics dashboard with real-time reporting, customizable KPIs, and actionable insights to drive data-driven decision making."
+                />
+              </div>
+
+              {/* Secure Data Management */}
+              <div className="grid gap-4 p-6 border border-gray-700 rounded-lg hover:border-primary transition-colors duration-300" data-aos="fade-up" data-aos-delay="400">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <FiShield className="w-6 h-6 text-primary" />
+                  </div>
+                  <Text textStyle="FAQTitle" value="Enterprise Security" />
+                </div>
+                <Text
+                  textStyle="FAQDescription"
+                  value="Secure Data Management, Bank-grade security with encrypted data storage, regular backups, audit trails, and compliance with industry standards to protect your critical business information."
+                />
+              </div>
+
+              {/* Seamless Integration */}
+              <div className="grid gap-4 p-6 border border-gray-700 rounded-lg hover:border-primary transition-colors duration-300" data-aos="fade-up" data-aos-delay="500">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <FiCode className="w-6 h-6 text-primary" />
+                  </div>
+                  <Text textStyle="FAQTitle" value="Seamless Integration" />
+                </div>
+                <Text
+                  textStyle="FAQDescription"
+                  value="Seamless Integration with Third-Party Tools, Easy integration with existing third-party tools, APIs, and software systems ensuring smooth data flow and eliminating operational silos."
+                />
+              </div>
+            </div>
+
+            {/* Additional ERP Benefits */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full mt-8">
+              <div className="grid gap-4 p-6 bg-gray-800/30 rounded-lg" data-aos="fade-up" data-aos-delay="600">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <FiTrendingUp className="w-5 h-5 text-primary" />
+                  </div>
+                  <Text textStyle="FAQTitle" value="Scalable Architecture" />
+                </div>
+                <Text
+                  textStyle="FAQDescription"
+                  value="Built to grow with your business - from small teams to enterprise-level operations with unlimited user capacity and modular expansion capabilities."
+                />
+              </div>
+
+              <div className="grid gap-4 p-6 bg-gray-800/30 rounded-lg" data-aos="fade-up" data-aos-delay="700">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <FiZap className="w-5 h-5 text-primary" />
+                  </div>
+                  <Text textStyle="FAQTitle" value="24/7 Support & Training" />
+                </div>
+                <Text
+                  textStyle="FAQDescription"
+                  value="Comprehensive support with dedicated account managers, extensive training programs, and round-the-clock technical assistance to ensure smooth operations."
+                />
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* {activeService === 'erp' && (
           <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
             <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
               <figure className="w-full h-[350px] relative">
@@ -915,12 +1045,12 @@ const ITServices = () => {
               </div>
             </aside>
           </section>
-        )}
+        )} */}
 
         <section className="grid place-items-center gap-16">
           <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
             <PageSentence
-              badge="FAQ"
+              badge="FAQ's"
               title="Frequently asked questions about our services"
             />
           </div>

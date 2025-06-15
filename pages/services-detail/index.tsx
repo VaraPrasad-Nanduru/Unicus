@@ -122,7 +122,7 @@ const ServiceDetail = () => {
     faqs: [
       {
         title: `What types of spaces do you work with?`,
-        description: `We work with all types of spaces - from cozy homes to massive commercial halls, hotels, malls, airports, cafes, and corporate offices. Each project is customized to the space's purpose and scale.`,
+        description: `We work with all types of spaces from cozy homes to massive commercial halls, hotels, malls, airports, cafes, and corporate offices. Each project is customized to the space's purpose and scale.`,
       },
       {
         title: `How do you ensure the artwork fits my space perfectly?`,
@@ -590,7 +590,7 @@ const ServiceDetail = () => {
       <section className="grid place-items-center gap-16">
         <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
           <PageSentence
-            badge="FAQ"
+            badge="FAQ's"
             title="Frequently asked questions about our services"
           />
         </div>

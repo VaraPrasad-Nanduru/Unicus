@@ -74,7 +74,7 @@ const Faq = () => {
       <section className="grid grid-cols-1 place-items-center">
         <div className="sm:w-10/12 md:8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
           <PageSentence
-            badge="FAQ"
+            badge="FAQ's"
             title="Frequently asked questions, maybe the same as yours"
           />
         </div>
