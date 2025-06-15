@@ -1,49 +1,282 @@
-                import React from 'react'
+import React from 'react'
 import PageTemplate from 'components/templates/PageTemplate'
 import PageSentence from 'components/molecules/PageSentence'
 import LineDivider from 'components/atoms/LineDivider'
 import Image from 'next/image'
-import SectionSentence from 'components/molecules/SectionSentence'
-import {
-  FiCheckCircle,
-  FiLayout,
-  FiHome,
-  FiTrendingUp,
-  FiRefreshCcw,
-  FiSettings,
-  FiUsers,
-  FiEye,
-  FiPenTool,
-  FiMapPin,
-  FiBookOpen,
-  FiShoppingBag,
-  FiHeart,
-  FiStar,
-  FiLayers,
-  FiGlobe
-} from 'react-icons/fi'
-import SmallCardIcon from 'components/molecules/Card/SmallCardIcon'
-import CardListIcon from 'components/molecules/Card/CardListIcon'
-import TextArrowLink from 'components/molecules/TextArrowLink'
-import IconListItem from 'components/molecules/IconListItem'
+import Text from 'components/atoms/Text'
+import FeatureCard from 'components/molecules/Card/FeatureCard'
+import randomString from 'utils/randomString'
+import Link from 'next/link'
 
 const InteriorServices = () => {
+  // Simple icon component to avoid import issues
+  const IconComponent = ({ type }: { type: string }) => {
+    const iconStyle = "w-6 h-6 flex items-center justify-center text-lg"
+    
+    switch (type) {
+      case 'home':
+        return <div className={iconStyle}>🏠</div>
+      case 'users':
+        return <div className={iconStyle}>👥</div>
+      case 'monitor':
+        return <div className={iconStyle}>💻</div>
+      case 'book':
+        return <div className={iconStyle}>📚</div>
+      case 'shopping':
+        return <div className={iconStyle}>🛍️</div>
+      case 'map':
+        return <div className={iconStyle}>📍</div>
+      case 'smartphone':
+        return <div className={iconStyle}>📱</div>
+      case 'globe':
+        return <div className={iconStyle}>🌐</div>
+      case 'check':
+        return <div className={iconStyle}>✅</div>
+      case 'trending':
+        return <div className={iconStyle}>📈</div>
+      case 'zap':
+        return <div className={iconStyle}>⚡</div>
+      case 'code':
+        return <div className={iconStyle}>💻</div>
+      case 'palette':
+        return <div className={iconStyle}>🎨</div>
+      case 'award':
+        return <div className={iconStyle}>🏆</div>
+      case 'target':
+        return <div className={iconStyle}>🎯</div>
+      case 'heart':
+        return <div className={iconStyle}>❤️</div>
+      case 'database':
+        return <div className={iconStyle}>🗄️</div>
+      case 'shield':
+        return <div className={iconStyle}>🛡️</div>
+      case 'figma':
+        return <div className={iconStyle}>🎨</div>
+      case 'clock':
+        return <div className={iconStyle}>⏰</div>
+      case 'layout':
+        return <div className={iconStyle}>📱</div>
+      case 'settings':
+        return <div className={iconStyle}>⚙️</div>
+      case 'activity':
+        return <div className={iconStyle}>📊</div>
+      case 'bar-chart':
+        return <div className={iconStyle}>📊</div>
+      default:
+        return <div className={iconStyle}>⭐</div>
+    }
+  }
+
+  // Interior Design Services Data (from services-detail)
+  const interiorData = {
+    badge: "INTERIOR DESIGN & ART",
+    title: "Transform Spaces with Custom Art & Complete Interior Solutions",
+    description: `We create bespoke interior experiences that blend artistic vision with functional design. From custom artworks to complete turnkey execution, every project tells a unique story tailored to your space and purpose.`,
+    features: [
+      {
+        title: 'Custom Artworks',
+        description: 'Wall murals, sculptures, and installations tailored to your space',
+        icon: <IconComponent type="palette" />,
+      },
+      {
+        title: 'Turnkey Execution',
+        description: 'Complete interior design from concept to final styling',
+        icon: <IconComponent type="home" />,
+      },
+      {
+        title: 'Fine Art Integration',
+        description: 'Seamless blend of art with lighting, furniture, and materials',
+        icon: <IconComponent type="award" />,
+      },
+      {
+        title: 'Eco-Friendly Solutions',
+        description: 'Up to 40% cost savings with sustainable alternatives',
+        icon: <IconComponent type="check" />,
+      },
+      {
+        title: 'Artist Collaboration',
+        description: 'Work with emerging artists on real-time projects',
+        icon: <IconComponent type="users" />,
+      },
+      {
+        title: 'Creative Consulting',
+        description: 'Story-led design with color psychology and symbolism',
+        icon: <IconComponent type="target" />,
+      },
+    ],
+    faqs: [
+      {
+        title: `What types of spaces do you work with?`,
+        description: `We work with all types of spaces - from cozy homes to massive commercial halls, hotels, malls, airports, cafes, and corporate offices. Each project is customized to the space's purpose and scale.`,
+      },
+      {
+        title: `How do you ensure the artwork fits my space perfectly?`,
+        description: `We start with detailed space analysis, 3D visualization, and concept development. Every artwork is created specifically for your dimensions, style preferences, and functional requirements.`,
+      },
+      {
+        title: `What is included in your turnkey execution service?`,
+        description: `Our turnkey service covers everything from initial concept and 3D visualization to material sourcing, execution from raw structure to final styling, and custom furniture integration.`,
+      },
+      {
+        title: `How much can I save with eco-friendly alternatives?`,
+        description: `Our innovative alternatives to costly materials like stone, marble, and wood can provide up to 40% savings without compromising on beauty or durability.`,
+      },
+      {
+        title: `Do you provide art workshops and learning sessions?`,
+        description: `Yes! We offer workshops in mural-making, sculpture, mixed media, team-building events, and educational outreach programs for all age groups.`,
+      },
+      {
+        title: `Can I collaborate with artists on my project?`,
+        description: `Absolutely! We facilitate collaborations with emerging artists, creating unique pieces that represent both your vision and the artist's creativity.`,
+      },
+    ]
+  }
+
   return (
     <>
       <PageTemplate title='Interior Services - Unicus'>
         <section className="grid place-items-center" data-aos="zoom-in-up">
           <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12">
             <PageSentence
-              badge="INTERIOR SERVICES"
-              title="Designing Spaces with Soul, Story & Substance"
-              description="From bespoke artworks to end-to-end interiors, Unicus Core blends design, materiality, and meaning to shape spaces that truly resonate."
+              badge="Fine Art Interiror Services"
+              title="Transform Spaces with Custom Art & Complete Interior Solutions"
+              description="We create bespoke interior experiences that blend artistic vision with functional design. From custom artworks to complete turnkey execution, every project tells a unique story."
             />
           </div>
         </section>
 
         <LineDivider />
 
-        {/* Creative Consulting Section */}
+        <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
+          <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
+            <figure className="w-full h-[450px] relative">
+              <Image
+                src={'/images/development-illustration.svg'}
+                layout="fill"
+                objectFit="fill"
+                alt='Interior Design and Custom Artwork Services'
+              />
+            </figure>
+          </aside>
+          <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
+            <div className="sm:w-10/12 md:w-8/12 lg:w-full lg:text-left grid gap-10">
+              <div className="grid gap-8">
+                <Text
+                  value={interiorData.description}
+                  textStyle={'SectionParagraph'}
+                />
+              </div>
+              <ul className="list-square text-white text-base font-medium pl-5 grid gap-2.5">
+                <li>Custom artworks tailored to your space and story</li>
+                <li>Complete turnkey execution from concept to styling</li>
+                <li>Eco-friendly alternatives with up to 40% cost savings</li>
+                <li>Collaboration with emerging artists and designers</li>
+                <li>Fine art integration with lighting and furniture</li>
+              </ul>
+            </div>
+            <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full"></div>
+          </aside>
+        </section>
+
+        <section className="grid place-items-center gap-16">
+          <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
+            <PageSentence
+              badge="FEATURES"
+              title="Here's what you will get when choosing our services"
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {interiorData.features.map((feature) => {
+              return (
+                <div key={randomString(64)} data-aos="fade-up">
+                  <FeatureCard
+                    title={feature.title}
+                    description={feature.description}
+                    icon={feature.icon}
+                    isNaked={true}
+                  />
+                </div>
+              )
+            })}
+          </div>
+        </section>
+
+        {/* Additional Interior-Specific Section */}
+        <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
+          <aside className="grid gap-12 place-items-center" data-aos="fade-up-right">
+            <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
+              <PageSentence
+                badge="ARTISTIC SERVICES"
+                title="Complete Range of Interior Art Services"
+                description="From wall murals to sculptural installations, we offer comprehensive artistic solutions for residential, commercial, and public spaces."
+              />
+            </div>
+          </aside>
+          <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
+            <figure className="w-full h-[350px] relative">
+              <Image
+                src={'/images/ui-design-illustration.svg'}
+                layout="fill"
+                objectFit="fill"
+                alt='Interior Art Services Showcase'
+              />
+            </figure>
+          </aside>
+        </section>
+
+        <section className="grid place-items-center gap-16">
+          <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
+            <PageSentence
+              badge="FAQ"
+              title="Frequently asked questions about our services"
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-x-7">
+            {interiorData.faqs.map((faq) => {
+              return (
+                <div className="grid gap-2.5" key={randomString(64)} data-aos="fade-right">
+                  <Text textStyle="FAQTitle" value={faq.title} />
+                  <Text textStyle="FAQDescription" value={faq.description} />
+                </div>
+              )
+            })}
+          </div>
+          <div className="text-white text-base font-medium">
+            {`Didn't find an answer? `}
+            <div className="sm:hidden"></div>
+            <div className="text-primary inline">
+              <Link href={'/contact'}>Do not hesitate to ask!</Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action Section */}
+        <section className="grid place-items-center gap-16">
+          <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
+            <PageSentence
+              badge="GET STARTED"
+              title="Ready to Transform Your Vision into Reality?"
+              description="Let's discuss your interior design project and create something amazing together. Get a free consultation and personalized quote."
+            />
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up">
+            <Link href="/contact">
+              <a className="border border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300 text-center">
+                Contact Us
+              </a>
+            </Link>
+          </div>
+        </section>
+
+        {/* 
+        FUTURE IMPLEMENTATION: Original Simple Design
+        This is the original simpler design that was used before implementing the detailed service-detail style design.
+        Uncomment this section if you want to revert to the original design.
+        */}
+
+        {/*
+        <LineDivider />
+
         <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
             <figure className="w-full h-[315px] relative">
@@ -81,8 +314,7 @@ const InteriorServices = () => {
           </aside>
         </section>
 
-        {/* Custom Artworks Section */}
-        <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
+                <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
           <aside className="grid gap-12 place-items-center" data-aos="fade-up-right">
             <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
               <SectionSentence
@@ -121,7 +353,6 @@ const InteriorServices = () => {
           </aside>
         </section>
 
-        {/* Large-Scale Public Artworks Section */}
         <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
             <figure className="w-full h-[315px] relative">
@@ -159,7 +390,6 @@ const InteriorServices = () => {
           </aside>
         </section>
 
-        {/* Art Workshops Section */}
         <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
           <aside className="grid gap-12 place-items-center" data-aos="fade-up-right">
             <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
@@ -199,7 +429,6 @@ const InteriorServices = () => {
           </aside>
         </section>
 
-        {/* Artistic Styling Section */}
         <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
             <figure className="w-full h-[315px] relative">
@@ -237,7 +466,6 @@ const InteriorServices = () => {
           </aside>
         </section>
 
-        {/* Why Choose Us Section */}
         <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
           <aside className="grid gap-12 place-items-center" data-aos="fade-up-right">
             <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
@@ -281,7 +509,6 @@ const InteriorServices = () => {
           </aside>
         </section>
 
-        {/* Key Features Section */}
         <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
             <figure className="w-full h-[545px] relative">
@@ -314,9 +541,12 @@ const InteriorServices = () => {
             </div>
           </aside>
         </section>
+        */}
+
       </PageTemplate>
     </>
   )
 }
 
 export default InteriorServices
+

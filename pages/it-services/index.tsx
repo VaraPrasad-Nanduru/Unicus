@@ -713,7 +713,7 @@ const ITServices = () => {
         <section className="grid place-items-center" data-aos="zoom-in-up">
           <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12">
             <PageSentence
-              badge="IT SERVICES"
+              badge="ERP & IT SERVICES"
               title="Comprehensive Technology Solutions for Modern Businesses"
               description="From digital marketing and custom development to enterprise ERP systems, we deliver technology solutions that drive growth and efficiency."
             />
