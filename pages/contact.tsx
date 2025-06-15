@@ -133,7 +133,6 @@ const Contact: React.FC = () => {
                   onChange={(value: string) => setForm({ ...form, phone: value })}
                   inputProps={{
                     name: 'phone',
-                    required: true,
                     autoFocus: false,
                   }}
                   containerStyle={{ width: '100%' }}
@@ -149,8 +148,17 @@ const Contact: React.FC = () => {
                     backgroundColor: 'transparent',
                   }}
                 />
+                {/* Hidden input to enable required validation */}
+                <input
+                  type="text"
+                  name="hiddenPhone"
+                  value={form.phone}
+                  onChange={() => { }}
+                  required
+                  style={{ display: 'none' }}
+                />
               </div>
-              <InputGroup label="Organisation Name" name="organisation" value={form.organisation} onChange={handleChange} />
+              <InputGroup label="Organisation Name" name="organisation" value={form.organisation} onChange={handleChange} required />
               <TextAreaGroup
                 label="How can we help you?"
                 name="message"
