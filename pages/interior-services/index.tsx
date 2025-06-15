@@ -188,7 +188,7 @@ becomes an extension of you."
                 paragraph="Our in-house team of artists creates bespoke artworks specifically designed to complement the purpose and scale of each space—whether it's a cozy home or a grand commercial hall."
               />
             </div>
-            <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
+            {/* <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
               <aside className="w-full grid grid-cols-1 gap-5">
                 <CardListIcon
                   icon={<FiLayout />}
@@ -203,8 +203,8 @@ becomes an extension of you."
                   title="Brand Identity Integration"
                 />
               </aside>
-              {/* <TextArrowLink label="Service Detail" href="/services-detail?type=interior" /> */}
-            </div>
+              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
+            </div> */}
           </aside>
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
             <figure className="w-full h-[450px] relative">
@@ -237,7 +237,7 @@ becomes an extension of you."
                 paragraph="We provide artistic consulting for interior brands, builders, and individuals—helping clients uncover their unique design story through personalized art recommendations, thematic planning, and artist-led concept visualization."
               />
             </div>
-            <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
+            {/* <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
               <aside className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <SmallCardIcon
                   title="Art Direction"
@@ -250,8 +250,8 @@ becomes an extension of you."
                   icon={<FiPenTool />}
                 />
               </aside>
-              {/* <TextArrowLink label="Service Detail" href="/services-detail?type=interior" /> */}
-            </div>
+              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
+            </div> */}
           </aside>
         </section>
 
@@ -271,10 +271,11 @@ becomes an extension of you."
               <SectionSentence
                 badge="PUBLIC ARTWORKS"
                 title="Large-Scale Public Artworks & Centerpiece Installations"
-                paragraph="We design and produce impactful large-scale artworks and theme-based centerpiece installations for public and commercial spaces such as malls, hotels, airports, cafes, and more."
+                paragraph="We design and produce impactful large-scale artworks and theme-based centerpiece installations for public and commercial spaces such as malls, hotels, airports, cafes, and more - bringing cultural relevance and visual
+storytelling into every environment"
               />
             </div>
-            <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
+            {/* <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
               <aside className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <SmallCardIcon
                   title="Mall Installations"
@@ -287,8 +288,8 @@ becomes an extension of you."
                   icon={<FiGlobe />}
                 />
               </aside>
-              {/* <TextArrowLink label="Service Detail" href="/services-detail?type=interior" /> */}
-            </div>
+              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
+            </div> */}
           </aside>
         </section>
 
@@ -301,7 +302,7 @@ becomes an extension of you."
                 paragraph="Hands-on workshops, corporate events, and team-building sessions focused on mural-making, sculpture, and creative skills."
               />
             </div>
-            <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
+            {/* <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
               <aside className="w-full grid grid-cols-1 gap-5">
                 <CardListIcon
                   icon={<FiBookOpen />}
@@ -316,8 +317,8 @@ becomes an extension of you."
                   title="Creative Skills Development"
                 />
               </aside>
-              {/* <TextArrowLink label="Service Detail" href="/services-detail?type=interior" /> */}
-            </div>
+              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
+            </div> */}
           </aside>
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
             <figure className="w-full h-[450px] relative">
@@ -350,7 +351,7 @@ becomes an extension of you."
                 paragraph="Curated interior décor and unique accessories—crockery, rugs, linens, and functional art pieces—professionally selected and styled to perfectly complement your design theme."
               />
             </div>
-            <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
+            {/* <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
               <aside className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <SmallCardIcon
                   title="Curated Décor"
@@ -363,12 +364,12 @@ becomes an extension of you."
                   icon={<FiLayers />}
                 />
               </aside>
-              {/* <TextArrowLink label="Service Detail" href="/services-detail?type=interior" /> */}
-            </div>
+              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
+            </div> */}
           </aside>
         </section>
 
-        <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
+        {/* <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
             <figure className="w-full h-[545px] relative">
               <Image
@@ -396,10 +397,10 @@ becomes an extension of you."
                 <IconListItem icon={<FiHeart />} value='Personalized Design Stories' />
                 <IconListItem icon={<FiSettings />} value='End-to-End Execution' />
               </aside>
-              {/* <TextArrowLink label="Service Detail" href="/services-detail?type=interior" /> */}
+              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
             </div>
           </aside>
-        </section>
+        </section> */}
 
         <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
