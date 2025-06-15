@@ -41,29 +41,13 @@ const Contact: React.FC = () => {
   })
 
   const [submitted, setSubmitted] = useState(false)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  const validateEmail = (email: string) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    return regex.test(email)
-  }
-
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-
-    if (!validateEmail(form.email)) {
-      alert("Please enter a valid email address.")
-      return;
-    }
-
-    setLoading(true)
-    setError(null)
-
     const formData = new FormData()
     formData.append(FIELD.firstName, form.firstName)
     formData.append(FIELD.lastName, form.lastName)
@@ -72,27 +56,21 @@ const Contact: React.FC = () => {
     formData.append(FIELD.organisation, form.organisation)
     formData.append(FIELD.message, form.message)
 
-    try {
-      await fetch(GOOGLE_FORM_ACTION_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        body: formData,
-      })
+    await fetch(GOOGLE_FORM_ACTION_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: formData,
+    })
 
-      setSubmitted(true)
-      setForm({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        organisation: '',
-        message: '',
-      })
-    } catch (err) {
-      setError("There was an error submitting the form. Please try again later.")
-    } finally {
-      setLoading(false)
-    }
+    setSubmitted(true)
+    setForm({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      organisation: '',
+      message: '',
+    })
   }
 
   return (
@@ -109,22 +87,60 @@ const Contact: React.FC = () => {
 
       <LineDivider />
       <section className="grid grid-cols-1 place-items-center gap-10 lg:gap-5 lg:grid-cols-2 mt-4 mb-2">
-        <aside className="w-full sm:w-10/12 md:w-8/12 grid grid-cols-1 gap-12 sm:place-items-center lg:w-full lg:place-items-start" data-aos="fade-up-right">
+        <aside
+          className="w-full sm:w-10/12 md:w-8/12 grid grid-cols-1 gap-12 sm:place-items-center lg:w-full lg:place-items-start"
+          data-aos="fade-up-right"
+        >
           <div className="sm:text-center lg:text-left">
-            <PageSentence title="We'd love to hear from you - drop us a message now!" badge="CONTACT" />
+            <PageSentence
+              title="We'd love to hear from you - drop us a message now!"
+              badge="CONTACT"
+            />
           </div>
           <div className="space-y-6">
-            <IconListItem label="Phone" value="+91 9036387160" icon={<FiPhoneCall />} />
-            <IconListItem label="Email" value="support@unicuscore.com" icon={<FiMail />} />
+            <IconListItem
+              label="Phone"
+              value="+91 9036387160"
+              icon={<FiPhoneCall />}
+            />
+            <IconListItem
+              label="Email"
+              value="support@unicuscore.com"
+              icon={<FiMail />}
+            />
           </div>
         </aside>
 
-        <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full lg:flex lg:justify-end" data-aos="fade-down-left">
-          <form className="grid grid-cols-1 gap-7 p-6 md:p-9 bg-dark rounded-md lg:w-10/12" onSubmit={handleSubmit}>
-            <div className="grid grid-cols-1 gap-4">
-              <InputGroup label="First Name" name="firstName" value={form.firstName} onChange={handleChange} required />
-              <InputGroup label="Last Name" name="lastName" value={form.lastName} onChange={handleChange} required />
-              <InputGroup label="Email" name="email" value={form.email} onChange={handleChange} required />
+        <aside
+          className="w-full sm:w-10/12 md:w-8/12 lg:w-full lg:flex lg:justify-end"
+          data-aos="fade-down-left"
+        >
+          <form
+            className="grid grid-cols-1 gap-7 p-6 md:p-9 bg-light rounded-md lg:w-10/12"
+            onSubmit={handleSubmit}
+          >
+            <div className="grid grid-cols-2 gap-4">
+              <InputGroup
+                label="First Name"
+                name="firstName"
+                value={form.firstName}
+                onChange={handleChange}
+                required
+              />
+              <InputGroup
+                label="Last Name"
+                name="lastName"
+                value={form.lastName}
+                onChange={handleChange}
+                required
+              />
+              <InputGroup
+                label="Email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                required
+              />
               <div className="flex flex-col">
                 <label className="mb-1 text-white font-medium text-sm">Phone Number</label>
                 <PhoneInput
@@ -150,27 +166,29 @@ const Contact: React.FC = () => {
                   }}
                 />
               </div>
-              <InputGroup label="Organisation Name" name="organisation" value={form.organisation} onChange={handleChange} />
-              <TextAreaGroup
-                label="How can we help you?"
-                name="message"
-                value={form.message}
-                onChange={handleChange}
-                placeholder="Tell us about your project, idea, or inquiry"
-                required
-              />
             </div>
+
+            <InputGroup
+              label="Organisation Name"
+              name="organisation"
+              value={form.organisation}
+              onChange={handleChange}
+            />
+            <TextAreaGroup
+              label="How can we help you?"
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              placeholder="Tell us about your project, idea, or inquiry"
+              required
+            />
             <Button
-              value={loading ? 'Sending...' : submitted ? 'Message Sent!' : 'Send Message'}
+              value={submitted ? 'Message Sent!' : 'Send Message'}
               type="submit"
-              disabled={submitted || loading}
-            // className="bg-purple-600 hover:bg-purple-700 text-white"
+              disabled={submitted}
             />
             {submitted && (
-              <p className="text-green-600 mt-2" aria-live="polite">Thank you for contacting us!</p>
-            )}
-            {error && (
-              <p className="text-red-600 mt-2">{error}</p>
+              <p className="text-green-600 mt-2">Thank you for contacting us!</p>
             )}
           </form>
         </aside>
