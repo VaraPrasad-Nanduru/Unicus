@@ -30,7 +30,7 @@ const TermsOfUse = () => {
                     All content on this site—including but not limited to text, graphics, layouts, software code, UI designs, mood boards, and 3D renders—is the intellectual property of Unicus Solutions unless otherwise stated.
                     <br>You may not:<br>
                     - Copy, reuse, or redistribute any content without prior written consent<br>
-                    - Use Unicus branding or visual content for promotion without a license<br>
+                    - Use Unicus Core branding or visual content for promotion without a license<br>
                     - Claim ownership over any of our designs, mockups, or software demos<br>
                   `}
                         />
@@ -40,10 +40,10 @@ const TermsOfUse = () => {
                         <Text
                             textStyle="PageContent"
                             value={`
-                    By hiring Unicus for any service, whether ERP-based or interior design:<br>
+                    By hiring Unicus Core for any service, whether ERP-based or interior design:<br>
                     - You agree to provide accurate information required for timely execution<br>
                     - You understand that timelines and project scope may vary based on deliverables<br>
-                    - Interior design services may involve third-party vendors, and Unicus will not be held liable for issues caused by those vendors unless under direct contract<br>
+                    - Interior design services may involve third-party vendors, and Unicus Core will not be held liable for issues caused by those vendors unless under direct contract<br>
                   `}
                         />
                     </div>
@@ -52,7 +52,7 @@ const TermsOfUse = () => {
                         <Text
                             textStyle="PageContent"
                             value={`
-                    Clients may submit content, suggestions, or testimonials. By doing so, you grant Unicus a non-exclusive, royalty-free license to use, publish, and share this content for marketing or case study purposes, unless stated otherwise in writing.<br>
+                    Clients may submit content, suggestions, or testimonials. By doing so, you grant Unicus Core a non-exclusive, royalty-free license to use, publish, and share this content for marketing or case study purposes, unless stated otherwise in writing.<br>
                   `}
                         />
                     </div>
@@ -61,7 +61,7 @@ const TermsOfUse = () => {
                         <Text
                             textStyle="PageContent"
                             value={`
-                    Our website may link to third-party sites or tools for reference or collaboration. Unicus is not responsible for the content or policies of these external sites.<br>
+                    Our website may link to third-party sites or tools for reference or collaboration. Unicus Core is not responsible for the content or policies of these external sites.<br>
                   `}
                         />
                     </div>
@@ -92,7 +92,7 @@ const TermsOfUse = () => {
                         <Text
                             textStyle="PageContent"
                             value={`
-                    We provide our website and services “as is,” without any express or implied warranties. Unicus does not guarantee uninterrupted service or absolute accuracy of all information provided.<br>
+                    We provide our website and services “as is,” without any express or implied warranties. Unicus Core does not guarantee uninterrupted service or absolute accuracy of all information provided.<br>
                     Nothing in this disclaimer limits our liability for fraud, personal injury due to negligence, or any matter which cannot be legally excluded.<br>
                   `}
                         />
@@ -102,7 +102,7 @@ const TermsOfUse = () => {
                         <Text
                             textStyle="PageContent"
                             value={`
-                    Unicus is not liable for:<br>
+                    Unicus Core is not liable for:<br>
                     - Loss of data or revenue from ERP service misuse<br>
                     - Delays in interior project timelines due to unforeseen site conditions or third-party suppliers<br>
                     - Indirect damages arising from your use of the site or services<br>
@@ -132,7 +132,7 @@ const TermsOfUse = () => {
                         <Text
                             textStyle="PageContent"
                             value={`
-                    These terms are governed by the laws applicable in the jurisdiction of Unicus Solutions' registered office.<br>
+                    These terms are governed by the laws applicable in the jurisdiction of Unicus Core Solutions' registered office.<br>
                   `}
                         />
                     </div>

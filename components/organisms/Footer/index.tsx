@@ -42,7 +42,7 @@ const Footer = () => {
                 textStyle="SectionParagraph"
               />
               <Text
-                value={`Design By Unicus LLC`}
+                value={`Design By Unicus Core LLC`}
                 textStyle="SectionParagraph"
               />
               <div className="flex space-x-4 mt-4">

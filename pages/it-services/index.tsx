@@ -665,7 +665,7 @@ const ITServices = () => {
                             src={'/images/maintenance-illustration.svg'}
               layout="fill"
               objectFit="fill"
-              alt='Why Choose Unicus ERP'
+              alt='Why Choose Unicus Core ERP'
             />
           </figure>
         </aside>
@@ -709,7 +709,7 @@ const ITServices = () => {
 
   return (
     <>
-      <PageTemplate title='IT Services - Unicus'>
+      <PageTemplate title='IT Services - Unicus Core'>
         <section className="grid place-items-center" data-aos="zoom-in-up">
           <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12">
             <PageSentence

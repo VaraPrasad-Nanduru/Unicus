@@ -18,7 +18,7 @@ const TermOfService = () => {
           <Text
             textStyle="PageContent"
             value={`
-                Unicus is a fine-art interior company founded by Dheekshetha, offering custom-designed interiors, art installations, décor services, and creative workshops. All products and services are subject to availability and may be modified at our discretion.
+                Unicus Core is a fine-art interior company founded by Dheekshetha, offering custom-designed interiors, art installations, décor services, and creative workshops. All products and services are subject to availability and may be modified at our discretion.
               `}
           />
           <div className="space-y-2.5">
@@ -26,7 +26,7 @@ const TermOfService = () => {
             <Text
               textStyle="PageContent"
               value={`
-                All content including logos, artwork, text, designs, graphics, and images on this site are the intellectual property of Unicus or its partners and are protected by copyright and trademark laws. You may not use, reproduce, or redistribute any content without express permission.
+                All content including logos, artwork, text, designs, graphics, and images on this site are the intellectual property of Unicus Core or its partners and are protected by copyright and trademark laws. You may not use, reproduce, or redistribute any content without express permission.
               `}
             />
           </div>
@@ -38,7 +38,7 @@ const TermOfService = () => {
                 * All artworks, interior products, and installations are custom-made and non-refundable once production has started.<br>
                 * If the client provides a reference image, the final artwork will not be an exact replica. We aim for 50–80% similarity or better. Each piece is original and artistically interpreted.<br>
                 * No rework or modification will be entertained after the final piece is delivered.<br>
-                * Design finalization will be done in consultation with the client. Any post-approval changes are not the responsibility of Unicus.<br>
+                * Design finalization will be done in consultation with the client. Any post-approval changes are not the responsibility of Unicus Core.<br>
                 * A non-refundable advance payment is required to initiate work.<br>
               `}
             />
@@ -50,7 +50,7 @@ const TermOfService = () => {
               value={`
                 * Registrations for workshops are confirmed only upon full payment.<br>
                 * Cancellations must be made at least 48 hours prior for a partial refund.<br>
-                * Unicus reserves the right to cancel or reschedule any workshop with prior notice.<br>
+                * Unicus Core reserves the right to cancel or reschedule any workshop with prior notice.<br>
              </ul> `}
             />
           </div>
@@ -90,7 +90,7 @@ const TermOfService = () => {
             <Text
               textStyle="PageContent"
               value={`
-                Unicus is not liable for any damages resulting from the use of this website or any product purchased through it. We do not guarantee uninterrupted or error-free service. All services are provided “as is” without warranties of any kind.
+                Unicus Core is not liable for any damages resulting from the use of this website or any product purchased through it. We do not guarantee uninterrupted or error-free service. All services are provided “as is” without warranties of any kind.
               `}
             />
           </div>
@@ -99,7 +99,7 @@ const TermOfService = () => {
             <Text
               textStyle="PageContent"
               value={`
-                Unicus reserves the right to terminate access or refuse service to any individual found in violation of these Terms or involved in harmful or unethical conduct.
+                Unicus Core reserves the right to terminate access or refuse service to any individual found in violation of these Terms or involved in harmful or unethical conduct.
               `}
             />
           </div>

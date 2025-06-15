@@ -14,7 +14,7 @@ import { FiHome, FiMonitor, FiSmartphone } from 'react-icons/fi'
 const Home = () => {
   return (
     <>
-      <PageTemplate title="Home - Unicus">
+      <PageTemplate title="Home - Unicus Core">
         {/* Banner Section */}
         {/* !mt-2 !mb-0 */}
         <section
@@ -196,7 +196,7 @@ quality, and efficiency - delivered seamlessly.
         <section className="flex flex-col gap-16 items-center">
           <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12" data-aos="zoom-in-up">
             <SectionSentence
-              paragraph="Real results. Real impact. See how Unicus has helped clients transform their spaces and streamline their systems."
+              paragraph="Real results. Real impact. See how Unicus Core has helped clients transform their spaces and streamline their systems."
               badge="Success Stories"
             />
           </div>

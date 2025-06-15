@@ -390,7 +390,7 @@ const ServiceDetail = () => {
   const currentData = getCurrentServiceData()
 
   return (
-    <PageTemplate title="Service Detail - Unicus">
+    <PageTemplate title="Service Detail - Unicus Core">
       <section className="grid place-items-center">
         <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
           <PageSentence

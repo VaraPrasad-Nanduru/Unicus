@@ -9,7 +9,7 @@ interface PageTemplateProps {
   children: ReactNode[] | JSX.Element
   title?: string
 }
-const PageTemplate = ({ children, title = 'Unicus' }: PageTemplateProps) => {
+const PageTemplate = ({ children, title = 'Unicus Core' }: PageTemplateProps) => {
   const browserName = useGetBrowserName()
   return (
     <>
