@@ -7,12 +7,18 @@ import Text from 'components/atoms/Text'
 import FeatureCard from 'components/molecules/Card/FeatureCard'
 import randomString from 'utils/randomString'
 import Link from 'next/link'
+import SectionSentence from 'components/molecules/SectionSentence'
+import CardListIcon from 'components/molecules/Card/CardListIcon'
+import { FiBookOpen, FiCheckCircle, FiEye, FiGlobe, FiHeart, FiHome, FiLayers, FiLayout, FiPenTool, FiRefreshCcw, FiSettings, FiShoppingBag, FiStar, FiTrendingUp, FiUsers } from 'react-icons/fi'
+import TextArrowLink from 'components/molecules/TextArrowLink'
+import IconListItem from 'components/molecules/IconListItem'
+import SmallCardIcon from 'components/molecules/Card/SmallCardIcon'
 
 const InteriorServices = () => {
   // Simple icon component to avoid import issues
   const IconComponent = ({ type }: { type: string }) => {
     const iconStyle = "w-6 h-6 flex items-center justify-center text-lg"
-    
+
     switch (type) {
       case 'home':
         return <div className={iconStyle}>🏠</div>
@@ -150,37 +156,6 @@ becomes an extension of you."
 
         <LineDivider />
 
-        <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
-          <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
-            <figure className="w-full h-[450px] relative">
-              <Image
-                src={'/images/development-illustration.svg'}
-                layout="fill"
-                objectFit="fill"
-                alt='Interior Design and Custom Artwork Services'
-              />
-            </figure>
-          </aside>
-          <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
-            <div className="sm:w-10/12 md:w-8/12 lg:w-full lg:text-left grid gap-10">
-              <div className="grid gap-8">
-                <Text
-                  value={interiorData.description}
-                  textStyle={'SectionParagraph'}
-                />
-              </div>
-              <ul className="list-square text-white text-base font-medium pl-5 grid gap-2.5">
-                <li>Custom artworks tailored to your space and story</li>
-                <li>Complete turnkey execution from concept to styling</li>
-                <li>Eco-friendly alternatives with up to 40% cost savings</li>
-                <li>Collaboration with emerging artists and designers</li>
-                <li>Fine art integration with lighting and furniture</li>
-              </ul>
-            </div>
-            <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full"></div>
-          </aside>
-        </section>
-
         <section className="grid place-items-center gap-16">
           <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
             <PageSentence
@@ -204,81 +179,44 @@ becomes an extension of you."
           </div>
         </section>
 
-        {/* Additional Interior-Specific Section */}
         <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
           <aside className="grid gap-12 place-items-center" data-aos="fade-up-right">
             <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
-              <PageSentence
-                badge="ARTISTIC SERVICES"
-                title="Complete Range of Interior Art Services"
-                description="From wall murals to sculptural installations, we offer comprehensive artistic solutions for residential, commercial, and public spaces."
+              <SectionSentence
+                badge="CUSTOM ARTWORKS"
+                title="Custom-Made Artworks for Interiors & Large Spaces"
+                paragraph="Our in-house team of artists creates bespoke artworks specifically designed to complement the purpose and scale of each space—whether it's a cozy home or a grand commercial hall."
               />
+            </div>
+            <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
+              <aside className="w-full grid grid-cols-1 gap-5">
+                <CardListIcon
+                  icon={<FiLayout />}
+                  title="Wall Murals & Sculptures"
+                />
+                <CardListIcon
+                  icon={<FiHome />}
+                  title="Residential & Commercial Spaces"
+                />
+                <CardListIcon
+                  icon={<FiHeart />}
+                  title="Brand Identity Integration"
+                />
+              </aside>
+              {/* <TextArrowLink label="Service Detail" href="/services-detail?type=interior" /> */}
             </div>
           </aside>
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
-            <figure className="w-full h-[350px] relative">
+            <figure className="w-full h-[450px] relative">
               <Image
-                src={'/images/ui-design-illustration.svg'}
+                src={'/images/development-illustration.svg'}
                 layout="fill"
                 objectFit="fill"
-                alt='Interior Art Services Showcase'
+                alt='Custom Artworks'
               />
             </figure>
           </aside>
         </section>
-
-        <section className="grid place-items-center gap-16">
-          <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
-            <PageSentence
-              badge="FAQ"
-              title="Frequently asked questions about our services"
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-x-7">
-            {interiorData.faqs.map((faq) => {
-              return (
-                <div className="grid gap-2.5" key={randomString(64)} data-aos="fade-right">
-                  <Text textStyle="FAQTitle" value={faq.title} />
-                  <Text textStyle="FAQDescription" value={faq.description} />
-                </div>
-              )
-            })}
-          </div>
-          <div className="text-white text-base font-medium">
-            {`Didn't find an answer? `}
-            <div className="sm:hidden"></div>
-            <div className="text-primary inline">
-              <Link href={'/contact'}>Do not hesitate to ask!</Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action Section */}
-        <section className="grid place-items-center gap-16">
-          <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
-            <PageSentence
-              badge="GET STARTED"
-              title="Ready to Transform Your Vision into Reality?"
-              description="Let's discuss your interior design project and create something amazing together. Get a free consultation and personalized quote."
-            />
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up">
-            <Link href="/contact">
-              <a className="border border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300 text-center">
-                Contact Us
-              </a>
-            </Link>
-          </div>
-        </section>
-
-        {/* 
-        FUTURE IMPLEMENTATION: Original Simple Design
-        This is the original simpler design that was used before implementing the detailed service-detail style design.
-        Uncomment this section if you want to revert to the original design.
-        */}
-
-        {/*
-        <LineDivider />
 
         <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
@@ -312,47 +250,8 @@ becomes an extension of you."
                   icon={<FiPenTool />}
                 />
               </aside>
-              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
+              {/* <TextArrowLink label="Service Detail" href="/services-detail?type=interior" /> */}
             </div>
-          </aside>
-        </section>
-
-                <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
-          <aside className="grid gap-12 place-items-center" data-aos="fade-up-right">
-            <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
-              <SectionSentence
-                badge="CUSTOM ARTWORKS"
-                title="Custom-Made Artworks for Interiors & Large Spaces"
-                paragraph="Our in-house team of artists creates bespoke artworks specifically designed to complement the purpose and scale of each space—whether it's a cozy home or a grand commercial hall."
-              />
-            </div>
-            <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
-              <aside className="w-full grid grid-cols-1 gap-5">
-                <CardListIcon
-                  icon={<FiLayout />}
-                  title="Wall Murals & Sculptures"
-                />
-                <CardListIcon
-                  icon={<FiHome />}
-                  title="Residential & Commercial Spaces"
-                />
-                <CardListIcon 
-                  icon={<FiHeart />} 
-                  title="Brand Identity Integration" 
-                />
-              </aside>
-              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
-            </div>
-          </aside>
-          <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
-            <figure className="w-full h-[450px] relative">
-              <Image
-                src={'/images/development-illustration.svg'}
-                layout="fill"
-                objectFit="fill"
-                alt='Custom Artworks'
-              />
-            </figure>
           </aside>
         </section>
 
@@ -388,7 +287,7 @@ becomes an extension of you."
                   icon={<FiGlobe />}
                 />
               </aside>
-              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
+              {/* <TextArrowLink label="Service Detail" href="/services-detail?type=interior" /> */}
             </div>
           </aside>
         </section>
@@ -398,7 +297,7 @@ becomes an extension of you."
             <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
               <SectionSentence
                 badge="ART WORKSHOPS"
-                title="Art Workshops & Learning"
+                title="Art Workshops & Creative Learning"
                 paragraph="Hands-on workshops, corporate events, and team-building sessions focused on mural-making, sculpture, and creative skills."
               />
             </div>
@@ -412,12 +311,12 @@ becomes an extension of you."
                   icon={<FiUsers />}
                   title="Mural-Making Workshops"
                 />
-                <CardListIcon 
-                  icon={<FiPenTool />} 
-                  title="Creative Skills Development" 
+                <CardListIcon
+                  icon={<FiPenTool />}
+                  title="Creative Skills Development"
                 />
               </aside>
-              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
+              {/* <TextArrowLink label="Service Detail" href="/services-detail?type=interior" /> */}
             </div>
           </aside>
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
@@ -464,51 +363,8 @@ becomes an extension of you."
                   icon={<FiLayers />}
                 />
               </aside>
-              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
+              {/* <TextArrowLink label="Service Detail" href="/services-detail?type=interior" /> */}
             </div>
-          </aside>
-        </section>
-
-        <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
-          <aside className="grid gap-12 place-items-center" data-aos="fade-up-right">
-            <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
-              <SectionSentence
-                badge="WHY CHOOSE US"
-                title="Comprehensive Interior Design Excellence"
-                paragraph="From custom art creation to eco-friendly solutions, we deliver personalized design stories with seamless execution and creative collaboration."
-              />
-            </div>
-            <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
-              <aside className="w-full grid grid-cols-1 gap-5">
-                <CardListIcon
-                  icon={<FiLayout />}
-                  title="Custom Art for Every Space"
-                />
-                <CardListIcon
-                  icon={<FiSettings />}
-                  title="Unique Materials & Techniques"
-                />
-                <CardListIcon 
-                  icon={<FiHeart />} 
-                  title="Seamless Art Integration" 
-                />
-                <CardListIcon 
-                  icon={<FiGlobe />} 
-                  title="Modern Meets Traditional" 
-                />
-              </aside>
-              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
-            </div>
-          </aside>
-          <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
-            <figure className="w-full h-[450px] relative">
-              <Image
-                src={'/images/maintenance-illustration.svg'}
-                layout="fill"
-                objectFit="fill"
-                alt='Why Choose Us'
-              />
-            </figure>
           </aside>
         </section>
 
@@ -540,11 +396,250 @@ becomes an extension of you."
                 <IconListItem icon={<FiHeart />} value='Personalized Design Stories' />
                 <IconListItem icon={<FiSettings />} value='End-to-End Execution' />
               </aside>
-              <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
+              {/* <TextArrowLink label="Service Detail" href="/services-detail?type=interior" /> */}
             </div>
           </aside>
         </section>
-        */}
+
+        <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
+          <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
+            <figure className="w-full h-[450px] relative">
+              <Image
+                src={'/images/development-illustration.svg'}
+                layout="fill"
+                objectFit="fill"
+                alt='Interior Design and Custom Artwork Services'
+              />
+            </figure>
+          </aside>
+          <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
+            <div className="sm:w-10/12 md:w-8/12 lg:w-full lg:text-left grid gap-10">
+              <div className="grid gap-8">
+                <Text
+                  value={interiorData.description}
+                  textStyle={'SectionParagraph'}
+                />
+              </div>
+              <ul className="list-square text-white text-base font-medium pl-5 grid gap-2.5">
+                <li>Custom artworks tailored to your space and story</li>
+                <li>Complete turnkey execution from concept to styling</li>
+                <li>Eco-friendly alternatives with up to 40% cost savings</li>
+                <li>Collaboration with emerging artists and designers</li>
+                <li>Fine art integration with lighting and furniture</li>
+              </ul>
+            </div>
+            <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full"></div>
+          </aside>
+        </section>
+
+        {/* Additional Interior-Specific Section */}
+        <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5">
+          <aside className="grid gap-12 place-items-center" data-aos="fade-up-right">
+            <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
+              <PageSentence
+                badge="ARTISTIC SERVICES"
+                title="Complete Range of Interior Art Services"
+                description="From wall murals to sculptural installations, we offer comprehensive artistic solutions for residential, commercial, and public spaces."
+              />
+            </div>
+          </aside>
+          <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
+            <figure className="w-full h-[350px] relative">
+              <Image
+                src={'/images/ui-design-illustration.svg'}
+                layout="fill"
+                objectFit="fill"
+                alt='Interior Art Services Showcase'
+              />
+            </figure>
+          </aside>
+        </section>
+
+                {/* Why Choose Us Section - Redesigned */}
+        <section className="grid place-items-center gap-16">
+          <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
+            <PageSentence
+              badge="WHY CHOOSE US"
+              title="Comprehensive Interior Design Excellence"
+              description="From custom art creation to eco-friendly solutions, we deliver personalized design stories with seamless execution and creative collaboration."
+            />
+          </div>
+
+          {/* Grid Layout for Why Choose Us Points */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+            {/* Custom Art for Every Space */}
+            <div className="grid gap-4 p-6 border border-gray-700 rounded-lg hover:border-primary transition-colors duration-300" data-aos="fade-up">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                  <FiLayout className="w-6 h-6 text-primary" />
+                </div>
+                <Text textStyle="FAQTitle" value="Custom Art" />
+              </div>
+              <Text
+                textStyle="FAQDescription"
+                value="Custom Art for Every Space, Wall murals, sculptures, and installations tailored to your size, style, and story."
+              />
+            </div>
+
+            {/* Unique Materials & Techniques */}
+            <div className="grid gap-4 p-6 border border-gray-700 rounded-lg hover:border-primary transition-colors duration-300" data-aos="fade-up" data-aos-delay="100">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                  <FiSettings className="w-6 h-6 text-primary" />
+                </div>
+                <Text textStyle="FAQTitle" value="Unique Stuff" />
+              </div>
+              <Text
+                textStyle="FAQDescription"
+                value="Unique Materials & Techniques, Mixed media, 3D printing, fine finishes, and artistic flooring designed to stand out."
+              />
+            </div>
+
+            {/* Seamless Art Integration */}
+            <div className="grid gap-4 p-6 border border-gray-700 rounded-lg hover:border-primary transition-colors duration-300" data-aos="fade-up" data-aos-delay="200">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                  <FiLayers className="w-6 h-6 text-primary" />
+                </div>
+                <Text textStyle="FAQTitle" value="Seamless Integration" />
+              </div>
+              <Text
+                textStyle="FAQDescription"
+                value="Seamless Art Integration, Art that blends naturally with lighting, furniture, and materials for a cohesive look."
+              />
+            </div>
+
+            {/* Modern Meets Traditional */}
+            <div className="grid gap-4 p-6 border border-gray-700 rounded-lg hover:border-primary transition-colors duration-300" data-aos="fade-up" data-aos-delay="300">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                  <FiGlobe className="w-6 h-6 text-primary" />
+                </div>
+                <Text textStyle="FAQTitle" value="Modern & Traditional" />
+              </div>
+              <Text
+                textStyle="FAQDescription"
+                value="Modern Meets Traditional, Contemporary takes on textile, fiber art, and handcrafted traditions."
+              />
+            </div>
+
+            {/* Eco-Friendly & Cost-Smart Solutions */}
+            <div className="grid gap-4 p-6 border border-gray-700 rounded-lg hover:border-primary transition-colors duration-300" data-aos="fade-up" data-aos-delay="400">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                  <FiTrendingUp className="w-6 h-6 text-primary" />
+                </div>
+                <Text textStyle="FAQTitle" value="Eco-Friendly" />
+              </div>
+              <Text
+                textStyle="FAQDescription"
+                value="Eco-Friendly & Cost-Smart Solutions, Innovative, sustainable alternatives that save up to 40% without compromising beauty, including waste-to-art designs."
+              />
+            </div>
+
+            {/* Empowering Artists & Creative Collaboration */}
+            <div className="grid gap-4 p-6 border border-gray-700 rounded-lg hover:border-primary transition-colors duration-300" data-aos="fade-up" data-aos-delay="500">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                  <FiUsers className="w-6 h-6 text-primary" />
+                </div>
+                <Text textStyle="FAQTitle" value="Empowering Artists" />
+              </div>
+              <Text
+                textStyle="FAQDescription"
+                value="Empowering Artists & Creative Collaboration, We hire and mentor emerging artists, forming artist-led teams for large installations and showcasing new talent through exclusive interior projects."
+              />
+            </div>
+
+            {/* Personalized Design Stories & Concept Development */}
+            <div className="grid gap-4 p-6 border border-gray-700 rounded-lg hover:border-primary transition-colors duration-300 md:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="600">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                  <FiHeart className="w-6 h-6 text-primary" />
+                </div>
+                <Text textStyle="FAQTitle" value="Personalized Design" />
+              </div>
+              <Text
+                textStyle="FAQDescription"
+                value="Personalized Design Stories, We craft unique design themes and narratives that integrate art as a core element, reflecting your identity, purpose, and vision."
+              />
+            </div>
+
+            {/* End-to-End Execution & Styling */}
+            <div className="grid gap-4 p-6 border border-gray-700 rounded-lg hover:border-primary transition-colors duration-300 md:col-span-2 lg:col-span-2" data-aos="fade-up" data-aos-delay="700">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                  <FiCheckCircle className="w-6 h-6 text-primary" />
+                </div>
+                <Text textStyle="FAQTitle" value="End-to-End Execution & Styling" />
+              </div>
+              <Text
+                textStyle="FAQDescription"
+                value="From initial concept to final styling, we manage every detail to bring your personalized design story to life seamlessly."
+              />
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          {/* <div className="text-center" data-aos="fade-up">
+            <TextArrowLink label="Service Detail" href="/services-detail?type=interior" />
+          </div> */}
+        </section>
+
+        <section className="grid place-items-center gap-16">
+          <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
+            <PageSentence
+              badge="FAQ"
+              title="Frequently asked questions about our services"
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-x-7">
+            {interiorData.faqs.map((faq) => {
+              return (
+                <div className="grid gap-2.5" key={randomString(64)} data-aos="fade-right">
+                  <Text textStyle="FAQTitle" value={faq.title} />
+                  <Text textStyle="FAQDescription" value={faq.description} />
+                </div>
+              )
+            })}
+          </div>
+          <div className="text-white text-base font-medium">
+            {`Didn't find an answer? `}
+            <div className="sm:hidden"></div>
+            <div className="text-primary inline">
+              <Link href={'/contact'}>Do not hesitate to ask!</Link>
+            </div>
+          </div>
+        </section>
+
+
+        {/* Call to Action Section */}
+        <section className="grid place-items-center gap-16">
+          <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
+            <PageSentence
+              badge="GET STARTED"
+              title="Ready to Transform Your Vision into Reality?"
+              description="Let's discuss your interior design project and create something amazing together. Get a free consultation and personalized quote."
+            />
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up">
+            <Link href="/contact">
+              <a className="border border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300 text-center">
+                Contact Us
+              </a>
+            </Link>
+          </div>
+        </section>
+
+
+        {/* FUTURE IMPLEMENTATION: Original Simple Design
+        This is the original simpler design that was used before implementing the detailed service-detail style design.
+        Uncomment this section if you want to revert to the original design. */}
+
+
+
+        {/* <LineDivider /> */}
+
 
       </PageTemplate>
     </>
