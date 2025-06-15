@@ -35,7 +35,7 @@ smart digital products and stunning physical spaces - all tailored to your visio
           <SectionSentence
             badge="STEP 01"
             title={`Discover & Discuss`}
-            paragraph={"Let’s start with a conversation. <br> Once you submit the quote form, our team will review your requirements and get in touch. This step is all about understanding your goals and the problems you're trying to solve - whether it's a new application, a process improvement, or a design vision for your space. <br> <sub> - For tech projects: We’ll align on what needs to be built. <br> - For design projects: We’ll dive into your space, purpose, and vision."}
+            paragraph={"Let’s start with a conversation. <br> Once you submit the quote form, our team will review your requirements and get in touch. This step is all about understanding your goals and the problems you're trying to solve - whether it's a new application, a process improvement, or a design vision for your space. <br> - For tech projects: We’ll align on what needs to be built. <br> - For design projects: We’ll dive into your space, purpose, and vision."}
           />
         </aside>
       </section>
@@ -44,7 +44,7 @@ smart digital products and stunning physical spaces - all tailored to your visio
           <SectionSentence
             badge="STEP 02"
             title={`Plan, Design & Build`}
-            paragraph="Turning ideas into execution. <br> After we’ve aligned on the scope, we move into planning, design, and development. Our team creates a detailed roadmap, executes design concepts, and builds your solution be it a robust app or a creatively styled interior. <br> <sub> - For tech: Wireframes, prototypes, development sprints. <br> - For design: Mood boards, material planning, turnkey execution."
+            paragraph="Turning ideas into execution. <br> After we’ve aligned on the scope, we move into planning, design, and development. Our team creates a detailed roadmap, executes design concepts, and builds your solution be it a robust app or a creatively styled interior. <br> - For tech: Wireframes, prototypes, development sprints. <br> - For design: Mood boards, material planning, turnkey execution."
           />
         </aside>
         <aside className="w-full" data-aos="fade-up-left">
@@ -75,7 +75,7 @@ smart digital products and stunning physical spaces - all tailored to your visio
           <SectionSentence
             badge="STEP 03"
             title={`Deliver & Deploy`}
-            paragraph="Your project. Fully delivered. <br> Once complete, we hand over all final assets - clean, organized, and ready to use. This includes: <br> <sub> ✅ For tech: Source code, design files, server access, documentation <br> ✅ For design: High-res renders, layout blueprints, final execution reports </sub> <br> We ensure you walk away with everything you need - backed by a process that's seamless from start to finish."
+            paragraph="Your project. Fully delivered. <br> Once complete, we hand over all final assets - clean, organized, and ready to use. This includes: <br> - For tech: Source code, design files, server access, documentation <br> - For design: High-res renders, layout blueprints, final execution reports </sub> <br> We ensure you walk away with everything you need - backed by a process that's seamless from start to finish."
           />
         </aside>
       </section>
