@@ -7,8 +7,9 @@ interface ButtonProps {
   style?: 'light' | 'outline' | 'solid'
   color?: 'white' | 'primary'
   radius?: 'pill' | 'rounded'
-  type?: 'button' | 'submit' | 'reset' // <-- Add this
-  disabled?: boolean // <-- Add this
+  type?: 'button' | 'submit' | 'reset'
+  disabled?: boolean
+  className?: string // Add this line
 }
 const Button = forwardRef(
   (
@@ -19,8 +20,9 @@ const Button = forwardRef(
       style = 'solid',
       color = 'primary',
       radius = 'rounded',
-      type = 'button', // <-- Add this
-      disabled = false, // <-- Add this
+      type = 'button',
+      disabled = false,
+      className = '', // Add this line
     }: ButtonProps,
     ref: React.LegacyRef<HTMLButtonElement>
   ) => {
@@ -70,11 +72,11 @@ const Button = forwardRef(
         <button
           className={`${getSizeStyles()} ${getStyleStyles()} ${getRadiusStyles()} transition-all select-none ${
             isMobile ? 'cursor-default' : 'cursor-pointer'
-          }`}
+          } ${className}`} // Add className here
           onClick={onClick}
           ref={ref}
-          type={type} // <-- Forward type
-          disabled={disabled} // <-- Forward disabled
+          type={type}
+          disabled={disabled}
         >
           {value}
         </button>
