@@ -64,7 +64,7 @@ const NavBar = () => {
                 } flex-col space-y-4 mt-6 lg:mt-0 lg:flex lg:flex-row lg:space-y-0 lg:space-x-4 xl:space-x-8 lg:place-items-center`}
               >
                 <NavLink href="/" value="Home" canActive={true} />
-                <NavLink href="/about" value="About" canActive={true} />
+                <NavLink href="/about" value="About Us" canActive={true} />
                 <NavLink 
                   href="/interior-services" 
                   value="Fine Art Interior Services" 

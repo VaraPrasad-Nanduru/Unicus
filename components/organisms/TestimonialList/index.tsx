@@ -39,26 +39,29 @@ const TestimonialList = () => {
       >
         <SwiperSlide className='mt-10'>
           <TestimonialCard
-            avatarSrc="/images/testimonial-avatar.png"
-            name="Esther Howard"
-            company="Abstergo Ltd."
+            avatarSrc="/images/deepak-das.png"
+            name="Deepak Das"
+            company="Bengaluru"
             testimony={`"Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."`}
           />
         </SwiperSlide>
         <SwiperSlide className='mt-10'>
           <TestimonialCard
-            avatarSrc="/images/testimonial-avatar-2.png"
-            name="Esther Howard"
-            company="Abstergo Ltd."
-            testimony={`"Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."`}
+            avatarSrc="/images/santosh.png"
+            name="Santosh"
+            company="Bengaluru"
+            testimony={`We're genuinely impressed by your company's dedication and the reliability of your product. It has been a game-changer for our business.`}
           />
         </SwiperSlide>
         <SwiperSlide className='mt-10'>
           <TestimonialCard
-            avatarSrc="/images/testimonial-avatar-3.png"
-            name="Esther Howard"
-            company="Abstergo Ltd."
-            testimony={`"Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."`}
+            avatarSrc="/images/chhaya.png"
+            name="Chhaya"
+            company="Hyderabad"
+            testimony={`I'm so glad I chose this beautiful Lippan art created by the Fine Art Interiors team.
+The craftsmanship is exceptional - even after two years, it still looks brand new with minimal
+upkeep. Truly a stunning piece!
+"`}
           />
         </SwiperSlide>
       </Swiper>

@@ -34,12 +34,12 @@ import Link from 'next/link'
 type ServiceCategory = 'digital' | 'development' | 'erp'
 
 const ITServices = () => {
-  const [activeService, setActiveService] = useState<ServiceCategory>('digital')
+  const [activeService, setActiveService] = useState<ServiceCategory>('erp')
 
   const serviceButtons = [
     {
       id: 'erp' as ServiceCategory,
-      title: 'ERP Solutions',
+      title: 'ERP Services',
       icon: <FiMonitor />,
       description: 'Smart, scalable & sector-specific systems'
     },
@@ -197,7 +197,7 @@ const ITServices = () => {
         icon: <IconComponent type="smartphone" />,
       },
       {
-        title: 'Custom Software',
+        title: 'Hybrid Application',
         description: 'Tailored solutions for automation and enterprise systems',
         icon: <IconComponent type="code" />,
       },
@@ -249,7 +249,7 @@ const ITServices = () => {
   const erpData = {
     badge: "ERP & SOFTWARE SOLUTIONS",
     title: "Smart, Scalable & Sector-Specific ERP Systems",
-    description: `Comprehensive ERP solutions designed for hospitals, educational institutes, retail, government, and utility sectors. 100% customizable with cloud-based and on-premise options.`,
+    description: `Comprehensive ERP services designed for hospitals, educational institutes, retail, government, and utility sectors. 100% customizable with cloud-based`,
     features: [
       {
         title: 'Hospital ERP',
@@ -285,7 +285,7 @@ const ITServices = () => {
     faqs: [
       {
         title: `What sectors do your ERP systems cover?`,
-        description: `We provide specialized ERP solutions for hospitals, educational institutions, retail businesses, government sectors, and utility companies. Each system is tailored to industry-specific requirements.`,
+        description: `We provide specialized ERP services for hospitals, educational institutions, retail businesses, government sectors, and utility companies. Each system is tailored to industry-specific requirements.`,
       },
       {
         title: `Are your ERP systems customizable?`,
@@ -293,7 +293,7 @@ const ITServices = () => {
       },
       {
         title: `Do you offer both cloud and on-premise solutions?`,
-        description: `We provide both cloud-based and on-premise ERP options. You can choose based on your security requirements, budget, and infrastructure preferences.`,
+        description: `We provide only cloud-based. You can choose based on your security requirements, budget, and infrastructure preferences.`,
       },
       {
         title: `How secure is the data management?`,
@@ -898,7 +898,7 @@ const ITServices = () => {
             <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
               <figure className="w-full h-[350px] relative">
                 <Image
-                  src={'/images/maintenance-illustration.svg'}
+                  src={'/images/development-illustration-2.svg'}
                   layout="fill"
                   objectFit="fill"
                   alt='ERP System Dashboard'
@@ -909,7 +909,7 @@ const ITServices = () => {
               <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
                 <PageSentence
                   badge="INDUSTRY EXPERTISE"
-                  title="Specialized ERP Solutions for Every Sector"
+                  title="Specialized ERP Services for Every Sector"
                   description="Our ERP systems are designed with deep industry knowledge, ensuring compliance, efficiency, and scalability for your specific business needs."
                 />
               </div>

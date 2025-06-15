@@ -139,8 +139,11 @@ const InteriorServices = () => {
           <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12">
             <PageSentence
               badge="Fine Art Interiror Services"
-              title="Transform Spaces with Custom Art & Complete Interior Solutions"
-              description="We create bespoke interior experiences that blend artistic vision with functional design. From custom artworks to complete turnkey execution, every project tells a unique story."
+              title="Where Custom Fine Art Transforms Living Spaces into Stories"
+              description="At Unicus Core, we don’t just decorate spaces - we personalise them.
+From hand-crafted murals to tailored spatial experiences, we infuse
+fine art into interiors with soul, form, and feeling. Your space
+becomes an extension of you."
             />
           </div>
         </section>
