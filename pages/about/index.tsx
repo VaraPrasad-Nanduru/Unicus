@@ -71,19 +71,21 @@ const About = () => {
               imageSrc="/images/Dheekshetha2.webp"
               job="Founder"
               name="K Dheekshetha"
+              linkedinUrl='https://www.linkedin.com/in/dheekshetha-k-65a3aa2a9/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
             />
           </div>
           <div data-aos="fade-up">
             <TeamCard
               imageSrc="/images/Aditya.webp"
-              job="Co-founder"
+              job="Co-Founder"
               name="Aditya Shekhar"
+              linkedinUrl='https://www.linkedin.com/in/imaditya28/'
             />
           </div>
           <div data-aos="fade-up">
             <TeamCard
               imageSrc="/images/Roshan.webp"
-              job="Marketing Head"
+              job="Head of Marketing"
               name="Roshan Kautilya"
               linkedinUrl='https://www.linkedin.com/in/kautilyaroshan/'
             />
