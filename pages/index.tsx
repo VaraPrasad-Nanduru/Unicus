@@ -26,8 +26,8 @@ const Home = () => {
               title="We Design Solutions. We Develop Systems. We Reimagine Spaces."
               description="From smart, scalable ERP systems that drive efficiency across retail, utilities, education,
 government and healthcare, to bespoke fine art interior designs that transform spaces into
-visual masterpieces - we deliver end-to-end solutions shaped by your unique vision. Innovation,
-quality, and efficiency - delivered seamlessly.
+visual masterpieces  we deliver end-to-end solutions shaped by your unique vision. Innovation,
+quality, and efficiency  delivered seamlessly.
 "
             // badge="DUAL-EXPERTISE-SOLUTIONS"
             />

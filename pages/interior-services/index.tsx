@@ -113,7 +113,7 @@ const InteriorServices = () => {
     faqs: [
       {
         title: `What types of spaces do you work with?`,
-        description: `We work with all types of spaces - from cozy homes to massive commercial halls, hotels, malls, airports, cafes, and corporate offices. Each project is customized to the space's purpose and scale.`,
+        description: `We work with all types of spaces from cozy homes to massive commercial halls, hotels, malls, airports, cafes, and corporate offices. Each project is customized to the space's purpose and scale.`,
       },
       {
         title: `How do you ensure the artwork fits my space perfectly?`,
@@ -234,7 +234,7 @@ becomes an extension of you."
               <SectionSentence
                 badge="CREATIVE CONSULTING"
                 title="Creative Consulting & Story-Led Art Direction"
-                paragraph="We provide artistic consulting for interior brands, builders, and individuals—helping clients uncover their unique design story through personalized art recommendations, thematic planning, and artist-led concept visualization."
+                paragraph="We provide artistic consulting for interior brands, builders, and individuals helping clients uncover their unique design story through personalized art recommendations, thematic planning, and artist-led concept visualization."
               />
             </div>
             {/* <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
@@ -271,7 +271,7 @@ becomes an extension of you."
               <SectionSentence
                 badge="PUBLIC ARTWORKS"
                 title="Large-Scale Public Artworks & Centerpiece Installations"
-                paragraph="We design and produce impactful large-scale artworks and theme-based centerpiece installations for public and commercial spaces such as malls, hotels, airports, cafes, and more - bringing cultural relevance and visual
+                paragraph="We design and produce impactful large-scale artworks and theme-based centerpiece installations for public and commercial spaces such as malls, hotels, airports, cafes, and more bringing cultural relevance and visual
 storytelling into every environment"
               />
             </div>
@@ -348,7 +348,7 @@ storytelling into every environment"
               <SectionSentence
                 badge="ARTISTIC STYLING"
                 title="Artistic Styling & Accessory Curation"
-                paragraph="Curated interior décor and unique accessories—crockery, rugs, linens, and functional art pieces—professionally selected and styled to perfectly complement your design theme."
+                paragraph="Curated interior décor and unique accessories crockery, rugs, linens, and functional art pieces professionally selected and styled to perfectly complement your design theme."
               />
             </div>
             {/* <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
@@ -590,7 +590,7 @@ storytelling into every environment"
         <section className="grid place-items-center gap-16">
           <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
             <PageSentence
-              badge="FAQ"
+              badge="FAQ's"
               title="Frequently asked questions about our services"
             />
           </div>
